@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ēnel Health — Library Index</title>
+<style>
+  :root{
+    --bg:#FBFEF5; --bg2:#EAF7F0; --ink:#081328;
+    --inkMute:rgba(8,19,40,0.66); --inkSoft:rgba(8,19,40,0.50);
+    --rule:rgba(8,19,40,0.12); --card:#FFFFFF;
+    --teal:#1C7C8E; --gold:#B8860B;
+    --F:"Helvetica Neue",Helvetica,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    --FM:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:var(--F);color:var(--ink);
+    background:linear-gradient(180deg,#E0FAEB 0%,#FBFEF5 42%,#FFFBEB 100%);
+    -webkit-font-smoothing:antialiased;min-height:100vh;}
+  .wrap{max-width:920px;margin:0 auto;padding:56px 28px 80px;}
+  header{border-bottom:1px solid var(--rule);padding-bottom:26px;margin-bottom:8px;}
+  .brand{font-size:22px;font-weight:800;letter-spacing:-0.02em;}
+  .brand span{color:var(--gold);}
+  .kicker{font-family:var(--FM);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:14px;}
+  h1{font-size:34px;font-weight:300;letter-spacing:-0.01em;margin:14px 0 10px;line-height:1.1;}
+  h1 b{font-weight:700;}
+  .sub{color:var(--inkMute);font-size:15px;line-height:1.6;max-width:600px;}
+  .legend{display:flex;gap:18px;margin-top:18px;font-size:12px;color:var(--inkSoft);font-family:var(--FM);}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle;}
+  section{margin-top:38px;}
+  .grouptitle{font-family:var(--FM);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--teal);margin-bottom:14px;}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:14px;
+    background:var(--card);border:1px solid var(--rule);border-radius:12px;
+    padding:15px 18px;margin-bottom:10px;}
+  .meta{min-width:0;}
+  .name{font-size:16px;font-weight:600;letter-spacing:-0.01em;}
+  .desc{font-size:13px;color:var(--inkMute);margin-top:3px;line-height:1.45;}
+  .links{display:flex;gap:8px;flex-shrink:0;}
+  a.btn{font-family:var(--FM);font-size:11px;letter-spacing:0.04em;text-decoration:none;
+    padding:8px 13px;border-radius:8px;border:1px solid var(--rule);white-space:nowrap;transition:all .15s;}
+  a.dark{background:#0a1426;color:#EAF7F0;border-color:#0a1426;}
+  a.dark:hover{background:#081328;}
+  a.light{background:var(--bg2);color:var(--ink);}
+  a.light:hover{background:#d9efe4;}
+  footer{margin-top:44px;padding-top:22px;border-top:1px solid var(--rule);
+    font-size:12px;color:var(--inkSoft);line-height:1.6;}
+  @media(max-width:620px){.row{flex-direction:column;align-items:flex-start;}.links{width:100%;}a.btn{flex:1;text-align:center;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Ēnel Health · Library Index</div>
+    <div class="brand">Ēn<span>el</span> Health</div>
+    <h1>The <b>Libraries</b></h1>
+    <p class="sub">Every Ēnel intelligence library, in both a dark and a light edition. Same content, same evidence, your choice of mode.</p>
+    <div class="legend">
+      <span><span class="dot" style="background:#0a1426"></span>Dark mode</span>
+      <span><span class="dot" style="background:#EAF7F0;border:1px solid var(--rule)"></span>Light mode</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="grouptitle">Mind &amp; Body</div>
+    <div id="g1"></div>
+  </section>
+  <section>
+    <div class="grouptitle">Rhythms &amp; Routines</div>
+    <div id="g2"></div>
+  </section>
+  <section>
+    <div class="grouptitle">Substances &amp; Devices</div>
+    <div id="g3"></div>
+  </section>
+  <section>
+    <div class="grouptitle">Systems &amp; Policy</div>
+    <div id="g4"></div>
+  </section>
+
+  <footer>
+    We carry no flag. We gather what is known, name who profits and who disagrees, and let you decide.
+    Educational resource, not medical advice. In a crisis, call or text 988 (US Suicide and Crisis Lifeline).
+  </footer>
+</div>
+<script>
+  var groups = {
+    g1: [
+      ["Mental Health","Non-drug therapies and practices for the mind"],
+      ["Touch Healing","Hands-on, analog bodywork and the mind-body link"],
+      ["Healing Traditions","World remedies and rituals, evidence beside culture"]
+    ],
+    g2: [
+      ["Fasting","Eating-pattern protocols and the science behind them"],
+      ["Circadian Rhythm","Light, timing, sleep, and the body clock"]
+    ],
+    g3: [
+      ["Peptides","Peptide compounds, stacks, and their evidence"],
+      ["Supplements","Vitamins, botanicals, and supplement claims"],
+      ["Probiotics","Strains, the gut microbiome, and what holds up"],
+      ["Kids Vitamins","Children's supplements, sorted by evidence"],
+      ["Prenatal and Maternal","Pregnancy and maternal nutrition"],
+      ["Devices","Health and wellness devices"]
+    ],
+    g4: [
+      ["Cost of Care","Health economics: where the money actually goes"],
+      ["Regulatory Atlas","How medicine is regulated around the world"]
+    ]
+  };
+  function enc(s){return encodeURIComponent(s);}
+  Object.keys(groups).forEach(function(gid){
+    var html = groups[gid].map(function(it){
+      var name=it[0], desc=it[1];
+      return '<div class="row"><div class="meta"><div class="name">'+name+'</div>'+
+        '<div class="desc">'+desc+'</div></div><div class="links">'+
+        '<a class="btn dark" href="Dark%20Mode/'+enc(name)+'.html">Dark</a>'+
+        '<a class="btn light" href="Light%20Mode/'+enc(name)+'.html">Light</a>'+
+        '</div></div>';
+    }).join('');
+    document.getElementById(gid).innerHTML = html;
+  });
+</script>
+</body>
+</html>
