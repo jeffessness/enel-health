@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ēnel Health · Peptide Study · Join</title>
+<style>*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#F2EDE1;--bg2:#EAE3D4;--fg:#1d2a36;--fg-dim:#5c6770;--line:rgba(29,42,54,.14);--card:#FFFFFF;--card-fg:#1d2a36;--card-dim:#5c6770;--card-line:rgba(29,42,54,.12);--card-shadow:0 24px 58px -34px rgba(29,42,54,.30);--hero-base:linear-gradient(180deg,#F7F2E7 0%,#F2EDE1 100%);--hero-fg:#16222e;--hero-dim:#5c6770;--nav-fg:#16222e;--foot-bg:#EAE3D4;--foot-fg:#1d2a36;--foot-line:rgba(29,42,54,.14);--accent:#2D9AAD;--accent-deep:#1C7C8E;--on-accent:#04141a}
+html{scroll-behavior:smooth}
+body{font-family:'Helvetica Neue',Helvetica,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;line-height:1.6}
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px}.col{max-width:760px}
+a{color:inherit}
+.label{font-size:11.5px;font-weight:600;letter-spacing:.17em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:600;text-decoration:none;padding:14px 28px;border-radius:6px;cursor:pointer;border:1px solid transparent;transition:filter .15s,background .15s,color .15s,border-color .15s}
+.btn-primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}.btn-primary:hover{filter:brightness(1.07)}
+.btn-primary[aria-disabled=true]{opacity:.45;pointer-events:none}
+.btn-line{background:transparent;color:var(--fg);border-color:var(--line)}.btn-line:hover{border-color:var(--accent);color:var(--accent)}
+/* nav (seamless over hero, no study tabs) */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0 4px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:17px;letter-spacing:.01em;color:var(--hero-fg);text-decoration:none}
+.brand svg{width:21px;height:21px;color:var(--accent)}.brand sup{font-size:.5em;vertical-align:super;opacity:.6}
+.nav .btn{padding:10px 19px;font-size:13.5px}
+/* hero */
+.hero{position:relative;overflow:hidden;color:var(--hero-fg);background:radial-gradient(120% 95% at 82% 0%,color-mix(in srgb,var(--accent) 24%,transparent),transparent 58%),var(--hero-base)}
+.herogrid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;padding:38px 0 72px}
+.h-kicker{color:var(--accent);margin-bottom:20px}
+.hero h1{font-weight:700;font-size:clamp(33px,5.3vw,52px);line-height:1.1;letter-spacing:-.015em;max-width:15ch;color:var(--hero-fg)}
+.hero .sub{font-size:17px;line-height:1.62;color:var(--hero-dim);max-width:50ch;margin-top:20px}
+.hero .cta-row{margin-top:30px}
+.micro{font-size:13.5px;color:var(--hero-dim);margin-top:14px;max-width:42ch}
+.micro b{color:var(--hero-fg);font-weight:600}
+/* validated example card */
+.vcard{background:var(--card);color:var(--card-fg);border-radius:14px;padding:24px;max-width:440px;box-shadow:var(--card-shadow);border:1px solid var(--card-line)}
+.vc-top{display:flex;align-items:center;gap:9px;margin-bottom:16px}
+.vc-badge{width:19px;height:19px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}.vc-badge svg{width:11px;height:11px}
+.vc-name{font-size:13px;font-weight:600}.vc-tag{margin-left:auto;font-size:9.5px;font-weight:600;letter-spacing:.15em;color:var(--card-dim);border:1px solid var(--card-line);border-radius:4px;padding:3px 8px}
+.vc-title{font-weight:700;font-size:20px;line-height:1.28;margin-bottom:18px}
+.vc-barlab{display:flex;justify-content:space-between;font-size:11px;font-weight:600;color:var(--card-dim);margin-bottom:7px}
+.vc-bar{height:8px;border-radius:5px;overflow:hidden;background:rgba(120,120,120,.16)}.vc-bar i{display:block;height:100%;background:var(--accent)}
+.vc-code{font-size:11px;letter-spacing:.02em;color:var(--card-dim);margin-top:18px;border-top:1px solid var(--card-line);padding-top:13px}
+.vc-cap{font-size:12.5px;color:var(--card-dim);margin-top:11px;line-height:1.5}
+/* sections */
+.sec{padding:74px 0 18px}
+.sec .label{color:var(--accent);margin-bottom:15px}
+.sec h2{font-weight:700;font-size:clamp(26px,3.7vw,35px);line-height:1.16;letter-spacing:-.01em;max-width:22ch;color:var(--fg)}
+.sec .lede{font-size:16.5px;line-height:1.62;color:var(--fg-dim);max-width:62ch;margin-top:15px}
+.cards{display:grid;grid-template-columns:1fr;gap:18px;margin-top:40px}
+.card{background:var(--card);color:var(--card-fg);border-radius:13px;padding:28px 26px 30px;border:1px solid var(--card-line)}
+.card .ic{color:var(--accent);width:30px;height:30px;margin-bottom:18px}.card .ic svg{width:30px;height:30px}
+.card .n{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent-deep);margin-bottom:14px}
+.card h3{font-weight:700;font-size:18.5px;line-height:1.3;margin-bottom:10px}.card p{font-size:14.5px;line-height:1.62;color:var(--card-dim)}
+/* faq (static, open) */
+.qa{max-width:780px;margin-top:34px;display:grid;gap:2px}
+.qi{border-top:1px solid var(--line);padding:24px 0}.qi:last-child{border-bottom:1px solid var(--line)}
+.qi h3{font-weight:700;font-size:18px;line-height:1.34;margin-bottom:10px;color:var(--fg)}
+.qi p{font-size:15px;line-height:1.68;color:var(--fg-dim);max-width:68ch}
+/* protocols + form */
+.proto{display:flex;gap:15px;align-items:flex-start;padding:21px 0;border-top:1px solid var(--line);cursor:pointer}.proto:first-of-type{border-top:0}
+.pbox{flex:none;width:20px;height:20px;border:1.5px solid var(--fg-dim);border-radius:4px;margin-top:3px;position:relative;transition:.15s}
+.proto.sel .pbox{background:var(--accent);border-color:var(--accent)}.proto.sel .pbox::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:9px;border:solid var(--on-accent);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.proto .pn{font-weight:700;font-size:17.5px;color:var(--fg)}.proto .pm{font-size:11.5px;font-weight:600;letter-spacing:.05em;color:var(--accent);margin:4px 0 6px}.proto .pd{font-size:14.5px;line-height:1.55;color:var(--fg-dim);max-width:62ch}
+.form{max-width:660px}.field{margin:26px 0}.field>label{display:block;font-weight:700;font-size:17px;margin-bottom:6px;color:var(--fg)}.hint{font-size:13.5px;color:var(--fg-dim);margin-bottom:12px}.req{color:var(--accent)}
+input[type=text],input[type=email],textarea,select{width:100%;font-family:inherit;font-size:16px;color:var(--fg);background:color-mix(in srgb,var(--card) 14%,var(--bg));border:1px solid var(--line);border-radius:6px;padding:13px 14px}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}textarea{min-height:92px;resize:vertical;line-height:1.5}
+.sso{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 4px}
+.sso a{display:flex;align-items:center;justify-content:center;gap:10px;padding:13px;border-radius:6px;border:1px solid var(--line);background:color-mix(in srgb,var(--card) 14%,var(--bg));color:var(--fg);text-decoration:none;font-size:14.5px;font-weight:600}
+.sso a:hover{border-color:var(--accent)}.sso a svg{display:block}
+.divider{display:flex;align-items:center;gap:14px;color:var(--fg-dim);font-size:13px;margin:22px 0 4px}.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:4px}.chip{font-family:inherit;font-size:14px;border:1px solid var(--line);background:color-mix(in srgb,var(--card) 14%,var(--bg));color:var(--fg);border-radius:100px;padding:8px 14px;cursor:pointer;transition:.15s}.chip.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}.fl{display:block;font-size:13px;color:var(--fg-dim);margin-bottom:6px}
+.privacy{background:color-mix(in srgb,var(--accent) 9%,var(--bg));border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:10px;padding:20px 22px;font-size:14px;color:var(--fg-dim);line-height:1.6;display:flex;gap:14px;align-items:flex-start}
+.privacy svg{width:22px;height:22px;color:var(--accent);flex:none;margin-top:1px}.privacy b{color:var(--fg);font-weight:700}
+.consent{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:22px;margin-top:18px;font-size:13.5px;color:var(--fg-dim);line-height:1.6}.consent b{color:var(--fg)}
+.check{display:flex;gap:11px;align-items:flex-start;margin-top:15px;cursor:pointer;font-size:14px;color:var(--fg)}.check input{margin-top:3px;width:17px;height:17px;accent-color:var(--accent);flex:none}
+.form-note{font-size:14px;color:var(--accent);margin-top:14px;display:none}
+/* payoff tiles + locked */
+.tiles{display:grid;grid-template-columns:1fr;gap:18px;margin-top:40px}
+.tile{background:var(--card);color:var(--card-fg);border-radius:13px;padding:26px;border:1px solid var(--card-line)}
+.tile .n{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--accent-deep);margin-bottom:14px}
+.tile h3{font-weight:700;font-size:19px;line-height:1.28;margin-bottom:11px}.tile p{font-size:14.5px;line-height:1.64;color:var(--card-dim)}
+.locks{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px}
+.lockcard{position:relative;background:var(--card);border:1px dashed var(--card-line);border-radius:13px;padding:26px;color:var(--card-fg);overflow:hidden}
+.lockcard .blur{filter:blur(5px);opacity:.5;user-select:none}
+.lockcard .blur .bn{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--accent-deep);margin-bottom:12px}
+.lockcard .blur h4{font-weight:700;font-size:17px;margin-bottom:9px}.lockcard .blur p{font-size:14px;line-height:1.6;color:var(--card-dim)}
+.lockcard .over{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center}
+.lockcard .over svg{width:24px;height:24px;color:var(--accent)}.lockcard .over span{font-size:13px;font-weight:700;letter-spacing:.05em;color:var(--card-fg)}
+.kgrid{max-width:780px;margin-top:30px}.krow{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:21px 0;border-top:1px solid var(--line)}.krow:first-of-type{border-top:0}
+.kn{font-weight:700;font-size:17.5px;color:var(--fg)}.ks{font-size:14px;color:var(--fg-dim);margin-top:3px}.ka{font-size:11.5px;font-weight:700;letter-spacing:.05em;color:var(--accent);white-space:nowrap;text-transform:uppercase}
+/* final cta */
+.cta{text-align:center;padding:82px 26px 88px;background:radial-gradient(120% 95% at 50% 0%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 60%),var(--hero-base);color:var(--hero-fg)}
+.cta h2{font-weight:700;font-size:clamp(27px,4.2vw,40px);line-height:1.18;max-width:19ch;margin:0 auto;color:var(--hero-fg)}
+.cta p{font-size:16px;color:var(--hero-dim);max-width:48ch;margin:17px auto 0;line-height:1.6}.cta .btn{margin-top:28px}
+/* footer */
+footer{background:var(--foot-bg);color:var(--foot-fg);padding:34px 26px 40px}
+.foot-in{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.foot-in .fm{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px}.foot-in .fm svg{width:18px;height:18px;color:var(--accent)}
+.foot-links{display:flex;flex-wrap:wrap;gap:16px}.foot-links a{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--foot-fg);text-decoration:none;opacity:.62}.foot-links a:hover{opacity:1}
+.foot-sw{margin-top:14px;border-top:1px solid var(--foot-line);padding-top:14px;font-size:11.5px;letter-spacing:.06em;opacity:.7}.foot-sw a{color:var(--foot-fg);text-decoration:none;border-bottom:1px solid var(--foot-line)}.foot-sw a.cur{color:var(--accent);border-bottom-color:var(--accent)}
+@media(min-width:880px){
+  .herogrid{grid-template-columns:1.05fr .95fr;gap:54px;padding:46px 0 88px}
+  .cards{grid-template-columns:1fr 1fr 1fr}.tiles{grid-template-columns:1fr 1fr 1fr}.locks{grid-template-columns:1fr 1fr 1fr}
+  .grid2{grid-template-columns:1fr 1fr}
+}
+</style></head><body><section class="hero" id="top"><div class="wrap"><nav class="nav"><a class="brand" href="peptide_landing.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 13 0 0 0 0 18M12 3a9 13 0 0 1 0 18M3.4 9h17.2M3.4 15h17.2"/></svg>Ēnel Health<sup>&reg;</sup></a><a class="btn btn-primary" href="peptide_join.html">Join the study</a></nav><div class="herogrid">
+    <div><p class="label h-kicker">Real-world evidence &middot; Community-powered</p><h1>Report what you take. Measure what it does.</h1><p class="sub">You report the peptide you already use, and we measure the result against your own baseline, with no brand, creator, or seller in the middle.</p>
+      <div class="cta-row"><a class="btn btn-primary" href="#enroll">Join the study</a></div>
+      <p class="micro"><b>Free for founding members.</b> No account needed to start.</p></div>
+    <div><div class="vcard"><div class="vc-top"><span class="vc-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.6 2.6L16 9.4"/></svg></span><span class="vc-name">Ēnel Validated</span><span class="vc-tag">EXAMPLE</span></div>
+<div class="vc-title">About 7 in 10 reported a measurable change.</div><div class="vc-barlab"><span>Measurable change 69%</span><span>No change 31%</span></div>
+<div class="vc-bar"><i style="width:69%"></i></div><div class="vc-code">STUDY 0001 &middot; effect index +0.42 &middot; 95% CI [0.36, 0.48]</div>
+<div class="vc-cap">An illustrative example of the verdict you would see, or not. We publish the null results too.</div></div></div>
+  </div></div></section>
+  <section class="sec"><div class="wrap"><p class="label">How it works</p><h2>You keep the routine. We do the measuring.</h2>
+    <div class="cards"><div class="card"><div class="n">01</div><h3>Join the study</h3><p>Free for founding members. Bring the peptide you already take.</p></div><div class="card"><div class="n">02</div><h3>Measure your baseline</h3><p>We capture objective data before and after, uninfluenced by anyone selling a protocol.</p></div><div class="card"><div class="n">03</div><h3>See the verdict</h3><p>We publish the effect and its interval, including the null results and the non-responders.</p></div></div></div></section>
+  <section class="sec" id="protocols"><div class="wrap col"><p class="label">Protocols</p><h2>Choose what matches you.</h2>
+    <p class="lede">Select the option closest to what you already do or plan to do. You can change it at any time.</p>
+    <div style="margin-top:24px"><div class="proto"><span class="pbox"></span><div><div class="pn">BPC-157</div><div class="pm">INTERMEDIATE &middot; 28 DAYS</div><div class="pd">A body-protective compound used for recovery and gut support.</div></div></div><div class="proto"><span class="pbox"></span><div><div class="pn">TB-500 (Thymosin Beta-4)</div><div class="pm">INTERMEDIATE &middot; 28 DAYS</div><div class="pd">Tissue repair and mobility.</div></div></div><div class="proto"><span class="pbox"></span><div><div class="pn">CJC-1295 with Ipamorelin</div><div class="pm">ADVANCED &middot; 28 DAYS</div><div class="pd">A growth-hormone secretagogue stack.</div></div></div><div class="proto"><span class="pbox"></span><div><div class="pn">GLP-1 agonist</div><div class="pm">INTERMEDIATE &middot; 56 DAYS</div><div class="pd">The semaglutide and tirzepatide appetite and metabolic class.</div></div></div><div class="proto"><span class="pbox"></span><div><div class="pn">GHK-Cu</div><div class="pm">BEGINNER &middot; 28 DAYS</div><div class="pd">A copper peptide for skin, hair, and tissue signaling.</div></div></div><div class="proto"><span class="pbox"></span><div><div class="pn">Add a custom protocol</div><div class="pm">CUSTOM</div><div class="pd">Describe what you are already doing and we will track it against your baseline.</div></div></div></div></div></section>
+  <section class="sec" id="enroll"><div class="wrap"><div class="form">
+    <p class="label">Enroll</p><h2>Join the peptides study.</h2>
+    <p class="lede" style="margin-bottom:24px">It is free, and it takes about a minute. We only ask for what helps us read your result against your own baseline.</p>
+    <div class="privacy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 8-7 10-4-2-7-5.6-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Your privacy, handled with care.</b> We ask for an email so we can send your result and the cohort report, and nothing more to start. Your raw data stays yours and is never sold. Anything we publish is combined across members and stripped of names.</div></div>
+    <div class="field"><div class="sso"><a href="#"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="#4285F4" d="M22.5 12.2c0-.7-.06-1.4-.18-2.06H12v3.9h5.9a5 5 0 0 1-2.18 3.3v2.74h3.52c2.06-1.9 3.26-4.7 3.26-7.88z"/><path fill="#34A853" d="M12 23c2.94 0 5.42-.97 7.22-2.63l-3.52-2.74c-.98.66-2.23 1.05-3.7 1.05-2.84 0-5.25-1.92-6.11-4.5H2.25v2.83A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.89 14.18a6.6 6.6 0 0 1 0-4.2V7.15H2.25a11 11 0 0 0 0 9.86z"/><path fill="#EA4335" d="M12 5.5c1.6 0 3.04.55 4.17 1.62l3.12-3.12C17.42 2.25 14.94 1.25 12 1.25A11 11 0 0 0 2.25 7.15l3.64 2.83C6.75 7.42 9.16 5.5 12 5.5z"/></svg>Continue with Google</a><a href="#"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M16.36 12.78c.02 2.6 2.28 3.46 2.3 3.47-.02.06-.36 1.24-1.19 2.46-.72 1.06-1.47 2.1-2.65 2.12-1.16.02-1.53-.69-2.86-.69-1.33 0-1.74.67-2.84.71-1.14.04-2-1.15-2.73-2.2-1.49-2.16-2.63-6.11-1.1-8.78a4.25 4.25 0 0 1 3.59-2.19c1.12-.02 2.17.75 2.86.75.68 0 1.96-.93 3.31-.79.56.02 2.15.23 3.17 1.71-.08.05-1.89 1.1-1.87 3.29zM14.19 4.6c.61-.74 1.02-1.77.91-2.8-.88.04-1.94.59-2.57 1.33-.56.65-1.06 1.7-.93 2.7.98.08 1.98-.5 2.59-1.23z"/></svg>Continue with Apple</a></div>
+      <div class="divider">or use your email</div>
+      <label for="email" style="margin-top:6px">Email <span class="req">&middot; required</span></label><div class="hint">Where your result and the cohort report will land.</div><input id="email" type="email" placeholder="you@example.com"></div>
+    <div class="field"><label>Name or alias <span style="font-weight:400;font-size:14px;color:var(--fg-dim)">(optional)</span></label><div class="hint">However you would like to appear. An alias is fine.</div><input type="text" placeholder="First name or alias"></div>
+    <div class="field"><label>What are you hoping to change?</label><div class="hint">Tap any that apply.</div><div class="chips" data-chipset><button type="button" class="chip">Recovery</button><button type="button" class="chip">Longevity</button><button type="button" class="chip">Performance</button><button type="button" class="chip">Weight and metabolism</button><button type="button" class="chip">Skin and hair</button><button type="button" class="chip">Energy</button></div></div>
+    <div class="field"><label for="core">What is the one thing you wish you could know for certain?</label><div class="hint">Your question helps decide what we study next.</div><textarea id="core" placeholder="Type your own, or pick one below."></textarea>
+      <div class="hint" style="margin-top:13px">Or back a question others are asking:</div><div class="chips" data-chipset><button type="button" class="chip">Does BPC-157 actually speed recovery?</button><button type="button" class="chip">Is my GLP-1 dose doing anything?</button><button type="button" class="chip">Are copper peptides worth it for skin?</button><button type="button" class="chip">How long until I should see a change?</button></div></div>
+    <div class="field"><label>About you <span style="font-weight:400;font-size:14px;color:var(--fg-dim)">(optional)</span></label><div class="hint">Helps us read patterns. Skip anything you would rather not share.</div>
+      <div class="grid2"><div><span class="fl">Age range</span><select><option>Prefer not to say</option><option>Under 25</option><option>25 to 34</option><option>35 to 44</option><option>45 to 54</option><option>55 to 64</option><option>65 and over</option></select></div>
+      <div><span class="fl">Gender</span><select><option>Prefer not to say</option><option>Woman</option><option>Man</option><option>Non-binary</option><option>Another term</option></select></div></div></div>
+    <div class="consent"><b>Before you join.</b><br>Report only what you are already using, or planning to use under a physician supervision. Do not take part if you are pregnant, breastfeeding, trying to conceive, under 18, or in active cancer treatment without oncology clearance. Many peptides are not approved by the Food and Drug Administration. This study is observational, and it is not medical advice, a diagnosis, or an endorsement. You can withdraw at any time.<label class="check"><input id="consent" type="checkbox"><span>I have read and agree to the consent above.</span></label><label class="check"><input id="terms" type="checkbox"><span>I agree to the terms of using Ēnel Health.</span></label></div>
+    <div style="margin-top:24px"><button class="btn btn-primary" id="joinbtn" aria-disabled="true">Join the study</button><p class="form-note" id="formnote">Demo only. Nothing was submitted. The live form posts to enrollment.</p></div>
+  </div></div></section><footer><div class="foot-in"><span class="fm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 13 0 0 0 0 18M12 3a9 13 0 0 1 0 18M3.4 9h17.2M3.4 15h17.2"/></svg>Ēnel Health<sup style="font-size:.5em;vertical-align:super;opacity:.6">&reg;</sup></span>
+<span class="foot-links"><a href="peptide_landing.html">Peptides</a><a href="fasting_landing.html">Fasting</a><a href="circadian_landing.html">Circadian</a><a href="peptide_landing.html">Overview</a><a href="peptide_join.html">Join</a><a href="peptide_payoff.html">Result</a></span></div>
+<div class="foot-in"><div class="foot-sw">Palette &middot; <a class="" href="../Bold/peptide_join.html">Bold</a> &middot; <a class="" href="../Mid/peptide_join.html">Mid</a> &middot; <a class="cur" href="../Light/peptide_join.html">Light</a></div></div></footer></body></html><script>(function(){document.querySelectorAll('[data-chipset] .chip').forEach(function(c){c.addEventListener('click',function(){c.classList.toggle('on')})});document.querySelectorAll('.proto').forEach(function(x){x.addEventListener('click',function(){x.classList.toggle('sel')})});var e=document.getElementById('email'),co=document.getElementById('consent'),t=document.getElementById('terms'),b=document.getElementById('joinbtn'),n=document.getElementById('formnote');function g(){b.setAttribute('aria-disabled',(e.value.trim()&&co.checked&&t.checked)?'false':'true')}e.addEventListener('input',g);[co,t].forEach(function(x){x.addEventListener('change',g)});b.addEventListener('click',function(ev){ev.preventDefault();if(b.getAttribute('aria-disabled')==='true')return;n.style.display='block'});g()})();</script>
