@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Ēnel Health · Peptide Study · Member preview</title><style>:root{--bg:#070c18;--bg2:#0a1426;--fg:#EAF1F8;--fg-dim:#93a4b8;--line:rgba(234,241,248,.13);--card:#FFFBEB;--card-fg:#0c1626;--card-dim:#4a5b6c;--card-line:rgba(8,19,40,.12);--card-shadow:0 34px 80px -34px rgba(0,0,0,.82);--hero-base:linear-gradient(180deg,#04070d 0%,#070c18 60%,#0b1626 100%);--hero-fg:#F6FAFE;--hero-dim:#93a4b8;--nav-fg:#F6FAFE;--foot-bg:#FFFBEB;--foot-fg:#0c1626;--foot-line:rgba(8,19,40,.12);--accent:#2D9AAD;--accent-deep:#1C7C8E;--on-accent:#04141a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Helvetica Neue',Helvetica,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;line-height:1.6}
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+a{color:inherit;text-decoration:none}
+.label{font-size:11.5px;font-weight:600;letter-spacing:.17em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:600;padding:14px 26px;border-radius:7px;cursor:pointer;border:1px solid transparent;transition:filter .15s,border-color .15s,color .15s}
+.btn-primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}.btn-primary:hover{filter:brightness(1.07)}
+.btn-primary[aria-disabled=true]{opacity:.45;pointer-events:none}
+/* top bar with journey */
+.topbar{background:var(--hero-base);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40}
+.tb-in{display:flex;align-items:center;gap:18px;padding:15px 26px;min-height:64px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px;color:var(--hero-fg)}.brand svg{width:20px;height:20px;color:var(--accent)}.brand sup{font-size:.5em;vertical-align:super;opacity:.6}
+.journey{display:none;align-items:center;gap:10px;margin:0 auto;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.journey .js a{color:var(--hero-dim)}.journey .js.on a{color:var(--accent)}
+.journey .js.on{position:relative}.journey .js.on::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:2px;background:var(--accent);border-radius:2px}
+.jsep{width:22px;height:1px;background:var(--line)}
+.tb-cta{padding:9px 17px;font-size:13px}
+footer{background:var(--foot-bg);color:var(--foot-fg);padding:34px 26px 40px;margin-top:8px}
+.foot-in{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.foot-in .fm{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px}.foot-in .fm svg{width:18px;height:18px;color:var(--accent)}
+.foot-links{display:flex;flex-wrap:wrap;gap:16px}.foot-links a{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--foot-fg);opacity:.62}.foot-links a:hover{opacity:1}
+.foot-sw{margin-top:14px;border-top:1px solid var(--foot-line);padding-top:14px;font-size:11.5px;letter-spacing:.06em;opacity:.7}.foot-sw a{color:var(--foot-fg);border-bottom:1px solid var(--foot-line)}.foot-sw a.cur{color:var(--accent);border-bottom-color:var(--accent)}
+@media(min-width:840px){.journey{display:flex}}
+.dash{padding:30px 0 24px}
+.dhead{max-width:820px}
+.dhead .step{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:13px}
+.dhead h1{font-weight:700;font-size:clamp(27px,4.2vw,38px);line-height:1.12;letter-spacing:-.015em}
+.dhead .sub{font-size:16px;color:var(--fg-dim);margin-top:13px;max-width:58ch}
+.board{display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px}
+.w{background:var(--card);color:var(--card-fg);border:1px solid var(--card-line);border-radius:15px;padding:22px 22px 24px;box-shadow:var(--card-shadow)}
+.w .wt{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-deep)}.w .wt svg{width:16px;height:16px}
+.w .wtag{margin-left:auto;font-size:9.5px;font-weight:700;letter-spacing:.14em;color:var(--card-dim);border:1px solid var(--card-line);border-radius:4px;padding:3px 7px}
+.w h3{font-weight:700;font-size:19px;line-height:1.26;margin:14px 0 4px}
+.w p{font-size:13.5px;line-height:1.58;color:var(--card-dim)}
+.barlab{display:flex;justify-content:space-between;font-size:11px;font-weight:600;color:var(--card-dim);margin:16px 0 7px}
+.prog{height:9px;border-radius:6px;overflow:hidden;background:color-mix(in srgb,var(--card-fg) 11%,#fff)}.prog i{display:block;height:100%;background:var(--accent)}
+.code{font-size:11px;letter-spacing:.02em;color:var(--card-dim);margin-top:15px;border-top:1px solid var(--card-line);padding-top:12px}
+.metric{display:flex;align-items:flex-end;gap:16px;margin-top:16px}.metric .big{font-size:42px;font-weight:300;letter-spacing:-.02em;line-height:.95}.metric .ml{font-size:12px;color:var(--card-dim);max-width:18ch}
+.spark{width:100%;height:46px;fill:none;stroke:var(--accent);stroke-width:2;margin-top:14px;opacity:.92}
+.cmp{margin-top:16px;display:grid;gap:11px}.cmp .row{display:grid;grid-template-columns:78px 1fr 40px;align-items:center;gap:11px;font-size:12px;color:var(--card-dim)}
+.cmp .tr{height:8px;border-radius:5px;background:color-mix(in srgb,var(--card-fg) 11%,#fff);overflow:hidden}.cmp .tr i{display:block;height:100%;background:var(--accent)}.cmp .vv{font-weight:700;color:var(--card-fg);text-align:right}
+/* field-shows tiles */
+.sec{padding:54px 0 8px}.sec .label{color:var(--accent);margin-bottom:13px}.sec h2{font-weight:700;font-size:clamp(24px,3.4vw,31px);line-height:1.16;letter-spacing:-.01em;max-width:24ch}
+.tiles{display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px}
+.tile{background:var(--bg2);border:1px solid var(--line);border-radius:13px;padding:24px}.tile .n{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--accent);margin-bottom:12px}.tile h3{font-weight:700;font-size:17.5px;line-height:1.28;margin-bottom:10px;color:var(--fg)}.tile p{font-size:14px;line-height:1.62;color:var(--fg-dim)}
+/* free list */
+.kgrid{max-width:820px;margin-top:26px}.krow{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 0;border-top:1px solid var(--line)}.krow:first-of-type{border-top:0}
+.kn{font-weight:700;font-size:16.5px;color:var(--fg)}.ks{font-size:13.5px;color:var(--fg-dim);margin-top:3px}.ka{font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--accent);white-space:nowrap;text-transform:uppercase}
+.cta{text-align:center;padding:70px 26px 80px;margin-top:40px;background:radial-gradient(120% 95% at 50% 0%,color-mix(in srgb,var(--accent) 20%,transparent),transparent 60%),var(--hero-base);color:var(--hero-fg);border-top:1px solid var(--line)}
+.cta h2{font-weight:700;font-size:clamp(26px,4vw,38px);line-height:1.16;max-width:20ch;margin:0 auto;color:var(--hero-fg)}.cta p{font-size:15.5px;color:var(--hero-dim);max-width:50ch;margin:15px auto 0}.cta .btn{margin-top:26px}
+@media(min-width:880px){.board{grid-template-columns:1.25fr .85fr}.tiles{grid-template-columns:1fr 1fr 1fr}.w.span{grid-column:1 / -1}}
+</style></head><body>
+<div class="topbar"><div class="wrap tb-in"><a class="brand" href="peptide_landing.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 13 0 0 0 0 18M12 3a9 13 0 0 1 0 18M3.4 9h17.2M3.4 15h17.2"/></svg>Ēnel Health<sup>&reg;</sup></a>
+<div class="journey"><span class="js"><a href="peptide_landing.html">Learn</a></span><span class="jsep"></span><span class="js"><a href="peptide_join.html">Join</a></span><span class="jsep"></span><span class="js on"><a href="peptide_payoff.html">Member</a></span></div>
+<a class="btn btn-primary tb-cta" href="peptide_join.html">Join the study</a></div></div>
+<section class="dash"><div class="wrap">
+  <div class="dhead"><span class="step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 19v-5"/><path d="M12.5 19V9"/><path d="M17 19v-8"/></svg>A preview of your member dashboard</span><h1>This is the home you get the moment you join.</h1><p class="sub">There is no result yet, because the study begins with its members. Here is the dashboard your data fills in over time, shown with example figures. Joining unlocks the live version and the professional tier of Ēnel Health.</p></div>
+  <div class="board">
+    <div class="w span"><div class="wt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.6 2.6L16 9.4"/></svg>Your verdict<span class="wtag">EXAMPLE</span></div><h3>About 7 in 10 reported a measurable change.</h3><div class="barlab"><span>Measurable change 69%</span><span>No change 31%</span></div><div class="prog"><i style="width:69%"></i></div><div class="code">STUDY 0001 &middot; effect index +0.42 &middot; 95% CI [0.36, 0.48]</div><p style="margin-top:11px">Your own verdict appears here once enough readings are in. We publish the null results too.</p></div>
+    <div class="w"><div class="wt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 19v-5"/><path d="M12.5 19V9"/><path d="M17 19v-8"/></svg>Your trend<span class="wtag">EXAMPLE</span></div><div class="metric"><div class="big">+0.42</div><div class="ml">recovery index versus your baseline</div></div><svg class="spark" viewBox="0 0 240 46" preserveAspectRatio="none"><polyline points="0,40 26,36 52,37 78,28 104,30 130,20 156,16 182,11 208,8 240,5"/></svg></div>
+    <div class="w"><div class="wt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0M17 8a3 3 0 0 1 0 6M16.5 19a5.5 5.5 0 0 0-2-3.9"/></svg>You vs the cohort<span class="wtag">EXAMPLE</span></div><div class="cmp"><div class="row"><span>You</span><span class="tr"><i style="width:78%"></i></span><span class="vv">+0.42</span></div><div class="row"><span>Cohort</span><span class="tr"><i style="width:58%"></i></span><span class="vv">+0.31</span></div><div class="row"><span>Placebo ref</span><span class="tr"><i style="width:24%"></i></span><span class="vv">+0.06</span></div></div></div>
+  </div>
+  <div class="sec"><p class="label">What the field already shows</p><h2>Three things worth knowing before you start.</h2>
+    <div class="tiles"><div class="tile"><div class="n">DEMAND</div><h3>A market moving faster than the evidence.</h3><p>The global peptide market was worth about 52.6 billion dollars in 2025, and GLP-1 medicines alone made up roughly 14 percent of all prescription drug spending in the United States.</p></div><div class="tile"><div class="n">REGULATION</div><h3>The rules are being rewritten right now.</h3><p>The Food and Drug Administration compounding advisory committee meets in July 2026 to decide the status of seven peptides, including BPC-157 and TB-500.</p></div><div class="tile"><div class="n">WHAT PEOPLE REPORT</div><h3>Recovery and appetite, with a quality problem.</h3><p>Recovery, appetite control, and energy are the reasons people most often start. They buy online and have concerns about quality control; Google says peptide is one of the fastest-growing search terms, so demand is outpacing what people know, and they're reporting everything from adverse events to major gains without any detail.</p></div></div></div>
+  <div class="sec"><p class="label">Yours to keep</p><h2>Free for founding members, forever.</h2>
+    <div class="kgrid">
+      <div class="krow"><div><div class="kn">Your performance dashboard</div><div class="ks">Every reading behind your number, tracked against your baseline.</div></div><span class="ka">Live on join</span></div>
+      <div class="krow"><div><div class="kn">The professional tier of Ēnel Health</div><div class="ks">The full library across every study, unlocked.</div></div><span class="ka">Included</span></div>
+      <div class="krow"><div><div class="kn">Your dataset and result document</div><div class="ks">Your readings as a CSV, and your result as a PDF.</div></div><span class="ka">Download</span></div>
+      <div class="krow"><div><div class="kn">Your founding place</div><div class="ks">Every season from here, at no cost.</div></div><span class="ka">Free, forever</span></div>
+    </div></div>
+</div></section>
+<section class="cta"><h2>Share your experience. We cover the cost of testing.</h2><p>Join the study, fill in your own dashboard, and unlock the professional tier. Either way, you finally get to know.</p><a class="btn btn-primary" href="peptide_join.html">Join the study</a></section>
+<footer><div class="foot-in"><span class="fm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 13 0 0 0 0 18M12 3a9 13 0 0 1 0 18M3.4 9h17.2M3.4 15h17.2"/></svg>Ēnel Health<sup style="font-size:.5em;vertical-align:super;opacity:.6">&reg;</sup></span>
+<span class="foot-links"><a href="peptide_landing.html">Peptides</a><a href="fasting_landing.html">Fasting</a><a href="circadian_landing.html">Circadian</a><a href="peptide_landing.html">Overview</a><a href="peptide_join.html">Join</a><a href="peptide_payoff.html">Result</a></span></div>
+<div class="foot-in"><div class="foot-sw">Palette &middot; <a class="cur" href="../Bold/peptide_payoff.html">Bold</a> &middot; <a href="../Mid/peptide_payoff.html">Mid</a> &middot; <a href="../Light/peptide_payoff.html">Light</a></div></div></footer>
+</body></html>
