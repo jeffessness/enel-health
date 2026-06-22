@@ -20,9 +20,11 @@
   li{margin:0 0 10px;padding-left:18px;position:relative;color:rgba(8,19,40,0.78);font-size:15px;}
   li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:#1C7C8E;}
   .term{font-weight:700;color:#081328;}
-  .card{background:#fff;border:1px solid rgba(8,19,40,0.12);border-radius:12px;padding:18px 20px;margin:10px 0;}
+  .card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid rgba(8,19,40,0.12);border-radius:12px;padding:18px 20px;margin:10px 0;transition:transform .15s,box-shadow .15s,border-color .15s;}
+  .card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(8,19,40,0.08);border-color:rgba(8,19,40,0.22);}
   .card .name{font-size:16px;font-weight:700;}
   .card .what{font-size:14px;color:rgba(8,19,40,0.70);margin-top:4px;}
+  .go{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:#1C7C8E;}
   a{color:#1C7C8E;font-weight:600;text-decoration:none;}
   hr{border:none;border-top:1px solid rgba(8,19,40,0.12);margin:34px 0;}
   .note{font-size:13px;color:rgba(8,19,40,0.55);}
@@ -46,14 +48,16 @@
   <h2>What is in this folder</h2>
   <p>Two complete design sets. They cover the same three studies (Peptides, Fasting, and Circadian, which is the body clock and sleep). Pick whichever look you prefer.</p>
 
-  <div class="card">
-    <div class="name">📁 Current Set (Reworked, 3 colors)</div>
-    <div class="what">The newest design, with stronger fact-based hooks. It comes in three color options to choose from: Bold, Mid, and Light. Open its own Read Me to see how to compare them.</div>
-  </div>
-  <div class="card">
-    <div class="name">📁 Library Style Set (dark, cream cards)</div>
+  <a class="card" href="Current%20Set%20%28Reworked%2C%203%20colors%29/index.html">
+    <div class="name">Current Set (Reworked, 3 colors)</div>
+    <div class="what">The newest design, with stronger fact-based hooks. Three color options to choose from: Bold, Mid, and Light.</div>
+    <span class="go">Open this set →</span>
+  </a>
+  <a class="card" href="Library%20Style%20Set%20%28dark%2C%20cream%20cards%29/index.html">
+    <div class="name">Library Style Set (dark, cream cards)</div>
     <div class="what">An alternate design that matches the look of the Ēnel libraries: a dark page with warm cream cards.</div>
-  </div>
+    <span class="go">Open this set →</span>
+  </a>
 
   <h2>How to open them</h2>
   <p>Double-click any <span class="term">.html</span> file and it opens in your web browser. Start with the <span class="term">index.html</span> inside a set to preview all of that set's pages in one place. If a page looks blank, right-click it and choose Open with → Chrome.</p>
