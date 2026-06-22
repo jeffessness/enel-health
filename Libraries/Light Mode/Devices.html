@@ -1898,9 +1898,9 @@ function CapStat({
   sub,
   light
 }) {
-  const ink = light ? LC.ink : C.t1,
-    mute = light ? LC.inkFaint : C.t3,
-    eye = light ? '#2D9AAD' : C.tealL;
+  const ink = light ? LC.ink : '#FFFFFF',
+    mute = light ? LC.inkFaint : 'rgba(255,255,255,0.72)',
+    eye = light ? '#2D9AAD' : 'rgba(255,255,255,0.85)';
   return /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1,
@@ -1908,7 +1908,7 @@ function CapStat({
       border: `1px solid ${light ? LC.cardBdr : C.bdr}`,
       borderRadius: 14,
       padding: '16px 16px',
-      background: light ? 'rgba(255,255,255,0.55)' : 'rgba(8,19,40,0.45)',
+      background: light ? 'rgba(255,255,255,0.55)' : '#0F3A52',
       backdropFilter: 'blur(6px)',
       WebkitBackdropFilter: 'blur(6px)'
     }
@@ -2138,7 +2138,7 @@ function Dashboard({
       lineHeight: 1.75,
       marginBottom: 16
     }
-  }, "Natural Data™ is Ēnel's first data field: what the world is actually saying about a compound, gathered into one place. Social listening from where people really are, practitioner and physician practice patterns, traditional and cultural medicine, regulatory signal, purchase behavior, and review sentiment synthesized across sources. Aggregated, sentiment-scored, and source-tagged, so you never have to leave to find the context."), /*#__PURE__*/React.createElement("div", {
+  }, "Natural Data™ is Ēnel's first data field: what the world is actually saying about a health product, protocol, treatment or thing, gathered into one place. Social listening from where people really are, practitioner and physician practice patterns, traditional and cultural medicine, regulatory signal, purchase behavior, and review sentiment synthesized across sources. Aggregated, sentiment-scored, and source-tagged, so you never have to leave to find the context."), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: 14.5,
       color: LC.inkMute,
