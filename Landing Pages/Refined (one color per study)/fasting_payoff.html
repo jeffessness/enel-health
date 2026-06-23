@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ēnel Health · Fasting Study — Your Result</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --serif:Georgia,'Gelasio','Times New Roman',serif;
+  --sans:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  --hero-a:#1c5a5c;--hero:#134043;--hero-b:#0d2a2c;
+  --fg:#F3EEE2;--fg-dim:#9bb2af;
+  --paper:#F2EDE1;--ink:#1f2c3a;--ink-dim:#6d6557;
+  --gold:#C0A468;--accent:#C05A38;
+  --line-d:rgba(243,238,226,.16);--line-l:rgba(31,44,58,.13);--card:#FBF8F1;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.55}
+.wrap{max-width:1140px;margin:0 auto;padding:0 30px}
+.col{max-width:780px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.serif{font-family:var(--serif)}
+a{color:inherit}
+.btn{display:inline-block;font-family:var(--sans);font-size:14.5px;text-decoration:none;padding:13px 26px;border-radius:3px;transition:filter .15s,background .15s,color .15s;cursor:pointer;border:1px solid transparent}
+.btn-primary{background:var(--accent);color:#F7F1E6;border-color:var(--accent)}
+.btn-primary:hover{filter:brightness(.94)}
+.btn-primary[disabled],.btn-primary[aria-disabled=true]{opacity:.4;pointer-events:none}
+.btn-ghost{background:transparent;color:var(--fg);border-color:rgba(243,238,226,.4)}
+.btn-ghost:hover{border-color:var(--fg)}
+.btn-dark{background:transparent;color:var(--ink);border-color:var(--line-l)}.btn-dark:hover{border-color:var(--ink)}
+
+/* hero */
+.hero{position:relative;color:var(--fg);overflow:hidden;
+  background:radial-gradient(130% 100% at 82% 18%,var(--hero-a) 0%,transparent 58%),radial-gradient(90% 80% at 100% 100%,rgba(192,90,56,.22) 0%,transparent 55%),linear-gradient(150deg,var(--hero-a) 0%,var(--hero) 52%,var(--hero-b) 100%)}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.wordmark{font-family:var(--serif);font-weight:700;font-size:18px}.wordmark sup{font-size:.5em;vertical-align:super;opacity:.7}
+.herogrid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;padding:24px 0 70px}
+.h-eyebrow{color:var(--gold);margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(33px,5.2vw,50px);line-height:1.12;letter-spacing:-.005em;max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .sub{font-size:16.5px;line-height:1.6;color:var(--fg-dim);max-width:46ch;margin-top:22px}
+.hero .specs{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--fg-dim);margin-top:18px}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+
+/* validated / data card */
+.vcard{background:rgba(8,15,26,.42);border:1px solid var(--line-d);border-radius:12px;padding:22px 22px 20px;max-width:460px}
+.vc-top{display:flex;align-items:center;gap:9px;margin-bottom:16px}
+.vc-badge{width:18px;height:18px;border-radius:50%;background:#3E7CA8;display:flex;align-items:center;justify-content:center;flex:none}
+.vc-badge svg{width:10px;height:10px}
+.vc-name{font-size:13px;font-weight:500}.vc-tag{margin-left:auto;font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--fg-dim);border:1px solid var(--line-d);border-radius:3px;padding:3px 7px}
+.vc-title{font-family:var(--serif);font-weight:700;font-size:21px;line-height:1.25;margin-bottom:18px}
+.vc-barlab{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--fg-dim);margin-bottom:7px}
+.vc-bar{height:7px;border-radius:4px;overflow:hidden;display:flex;background:rgba(243,238,226,.12)}
+.vc-bar i{display:block;height:100%;background:var(--accent)}
+.vc-code{font-family:var(--mono);font-size:10.5px;line-height:1.7;color:var(--fg-dim);margin-top:18px;border-top:1px solid var(--line-d);padding-top:14px}
+.vc-cap{font-size:12.5px;color:var(--fg-dim);margin-top:12px;line-height:1.5;opacity:.9}
+
+/* light sections */
+.sec{background:var(--paper);padding:80px 0 20px}
+.sec .eyebrow{color:var(--accent);margin-bottom:16px}
+.sec h2{font-family:var(--serif);font-weight:700;font-size:clamp(27px,4vw,37px);line-height:1.16;letter-spacing:-.005em;max-width:20ch}
+.sec .lede{font-size:16.5px;line-height:1.6;color:var(--ink-dim);max-width:60ch;margin-top:16px}
+.steps{display:grid;grid-template-columns:1fr;gap:20px;margin-top:42px}
+.step{background:var(--card);border:1px solid var(--line-l);border-radius:9px;padding:26px 26px 30px}
+.step .n{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--gold);margin-bottom:16px}
+.step h3{font-family:var(--serif);font-weight:700;font-size:19px;margin-bottom:9px}
+.step p{font-size:14.5px;line-height:1.6;color:var(--ink-dim)}
+
+/* faq */
+.qa{max-width:780px;margin-top:22px}
+details{border-top:1px solid var(--line-l)}details:last-child{border-bottom:1px solid var(--line-l)}
+summary{list-style:none;cursor:pointer;padding:22px 38px 22px 0;position:relative;font-family:var(--serif);font-weight:700;font-size:17.5px;line-height:1.35}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:2px;top:19px;font-family:var(--sans);font-weight:400;font-size:24px;color:var(--accent)}
+details[open] summary::after{content:"\2013"}
+.answer{padding:0 0 24px;font-size:15px;line-height:1.68;color:var(--ink-dim);max-width:66ch}
+
+/* protocols */
+.proto{display:flex;gap:16px;align-items:flex-start;padding:22px 0;border-top:1px solid var(--line-l);cursor:pointer}
+.proto:first-of-type{border-top:0}
+.pbox{flex:none;width:19px;height:19px;border:1px solid var(--ink);border-radius:3px;margin-top:4px;position:relative;transition:background .15s,border-color .15s}
+.proto.sel .pbox{background:var(--accent);border-color:var(--accent)}
+.proto.sel .pbox::after{content:"";position:absolute;left:6px;top:2px;width:4px;height:9px;border:solid #F7F1E6;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.proto .pn{font-family:var(--serif);font-weight:700;font-size:18px}
+.proto .pm{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--accent);margin:3px 0 6px}
+.proto .pd{font-size:14.5px;line-height:1.55;color:var(--ink-dim);max-width:62ch}
+
+/* form */
+.form{max-width:680px}.field{margin:28px 0}
+.field>label{display:block;font-family:var(--serif);font-weight:700;font-size:18px;margin-bottom:5px}
+.hint{font-size:13.5px;color:var(--ink-dim);margin-bottom:12px}.req{color:var(--accent)}
+input[type=text],input[type=email],textarea,select{width:100%;font-family:var(--sans);font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--line-l);border-radius:3px;padding:13px 14px}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+textarea{min-height:92px;resize:vertical;line-height:1.5}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:4px}
+.chip{font-size:14px;border:1px solid var(--line-l);background:#fff;color:var(--ink);border-radius:100px;padding:8px 14px;cursor:pointer;transition:border-color .15s,background .15s,color .15s}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#F7F1E6}
+.grid2{display:grid;grid-template-columns:1fr;gap:16px}.fl{display:block;font-size:13px;color:var(--ink-dim);margin-bottom:6px}
+.consent{background:var(--card);border:1px solid var(--line-l);border-radius:6px;padding:22px;margin-top:18px;font-size:14px;color:var(--ink-dim);line-height:1.62}
+.consent strong{color:var(--ink)}
+.check{display:flex;gap:11px;align-items:flex-start;margin-top:16px;cursor:pointer;font-size:14.5px;color:var(--ink)}
+.check input{margin-top:3px;width:17px;height:17px;accent-color:var(--accent);flex:none}
+.form-note{font-size:14px;color:var(--accent);margin-top:14px;display:none}
+
+/* payoff bits */
+.kgrid{max-width:780px;margin-top:24px}
+.krow{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:22px 0;border-top:1px solid var(--line-l)}.krow:first-of-type{border-top:0}
+.kn{font-family:var(--serif);font-weight:700;font-size:18px}.ks{font-size:14px;color:var(--ink-dim);margin-top:3px}
+.ka{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--accent);white-space:nowrap;text-transform:uppercase}
+
+/* community / selfie layer */
+.human{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.memcard{background:var(--card);border:1px solid var(--line-l);border-radius:11px;overflow:hidden;max-width:380px}
+.memthumb{aspect-ratio:4/3;background:radial-gradient(120% 120% at 70% 20%,var(--hero-a),var(--hero-b));display:flex;align-items:center;justify-content:center;position:relative}
+.play{width:54px;height:54px;border-radius:50%;border:1.5px solid rgba(243,238,226,.75);position:relative}
+.play::after{content:"";position:absolute;left:21px;top:16px;border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent rgba(243,238,226,.92)}
+.memmeta{padding:18px 20px 20px}
+.mm-name{font-family:var(--serif);font-weight:700;font-size:17px}
+.mm-sub{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink-dim);margin-top:3px}
+.mm-bar-l{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--ink-dim);margin:14px 0 7px}
+.mm-bar{height:7px;border-radius:4px;overflow:hidden;background:rgba(31,44,58,.12)}
+.mm-bar i{display:block;height:100%;background:var(--accent)}
+
+/* cta + footer */
+.cta{color:var(--fg);text-align:center;padding:84px 30px 90px;background:radial-gradient(120% 140% at 50% 0%,var(--hero-a) 0%,var(--hero-b) 70%)}
+.cta h2{font-family:var(--serif);font-weight:700;font-size:clamp(28px,4.4vw,42px);line-height:1.18;max-width:18ch;margin:0 auto}
+.cta p{font-size:16px;color:var(--fg-dim);max-width:46ch;margin:18px auto 0;line-height:1.6}.cta .btn{margin-top:30px}
+footer{background:var(--hero-b);color:var(--fg-dim);text-align:center;padding:34px 30px 44px}
+footer .fm{font-family:var(--serif);font-weight:700;font-size:16px;color:var(--fg)}
+footer .ft{font-family:var(--mono);font-size:11px;letter-spacing:.06em;margin-top:9px}
+footer a{color:var(--fg-dim);text-decoration:none;border-bottom:1px solid var(--line-d)}
+
+@media(min-width:880px){
+  .herogrid{grid-template-columns:1.04fr .96fr;gap:54px;padding:30px 0 86px}
+  .steps{grid-template-columns:1fr 1fr 1fr}
+  .grid2{grid-template-columns:1fr 1fr}
+  .human{grid-template-columns:1.05fr .95fr;gap:56px}
+}</style></head><body>
+<section class="hero"><div class="wrap"><div class="topbar"><span class="wordmark">Ēnel Health<sup>&reg;</sup></span><a class="btn btn-primary" href="fasting_join.html">Join the Study</a></div></div>
+  <div class="wrap"><div class="herogrid">
+    <div>
+      <p class="eyebrow h-eyebrow">Your result &middot; Season one</p>
+      <h1>Against where you started, your marker fell <em>9%</em>.</h1><p class="sub">A real move, not a rounding error: effect index +0.18, 95% confidence interval +0.05 to +0.31. You held the window 84% of nights.</p>
+      <p class="sub" style="opacity:.85;margin-top:14px">Some members saw no change at all. This is proof for you, not the internet&rsquo;s average.</p>
+    </div>
+    <div><div class="vcard">
+  <div class="vc-top"><span class="vc-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#F7F1E6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="vc-name">Ēnel Validated</span><span class="vc-tag">EXAMPLE</span></div>
+  <div class="vc-title">About 6 in 10 saw a measurable change.</div>
+  <div class="vc-barlab"><span>Measurable change 59%</span><span>No change 41%</span></div>
+  <div class="vc-bar"><i style="width:59%"></i></div>
+  <div class="vc-code">STUDY 0002 &middot; effect index +0.18 &middot; 95% CI [0.05, 0.31]</div>
+  <div class="vc-cap">The overall effect is still uncertain. We publish that too. That is the point.</div></div></div>
+  </div></div>
+</section>
+<section class="sec"><div class="wrap">
+  <p class="eyebrow">What this is &mdash; and isn&rsquo;t</p><h2>Your own answer, not the internet&rsquo;s.</h2>
+  <div class="steps"><div class="step"><div class="n">01</div><h3>Pre-registered</h3><p>The endpoint was locked before you enrolled. Nothing moved once the data came in.</p></div><div class="step"><div class="n">02</div><h3>No brand behind it</h3><p>No manufacturer, creator, or seller funded the result, so there was no answer anyone needed it to give.</p></div><div class="step"><div class="n">03</div><h3>Your raw data</h3><p>The figure is built only from readings you can open, point by point.</p></div></div>
+</div></section>
+<section class="sec"><div class="wrap col">
+  <p class="eyebrow">Yours to keep</p><h2>Free for founding members, forever.</h2>
+  <div class="kgrid"><div class="krow"><div><div class="kn">Your full dataset</div><div class="ks">Every reading behind your number.</div></div><span class="ka">CSV · Download</span></div><div class="krow"><div><div class="kn">Your result, as a document</div><div class="ks">This page, in a form you hold.</div></div><span class="ka">PDF · Download</span></div><div class="krow"><div><div class="kn">The cohort report</div><div class="ks">Effect size, uncertainty, and the open questions.</div></div><span class="ka">Published in full</span></div><div class="krow"><div><div class="kn">Your founding place</div><div class="ks">Every season from here, at no cost.</div></div><span class="ka">Locked</span></div></div>
+</div></section>
+<section class="cta"><h2 class="serif">You kept the discipline. Now the proof is yours.</h2><p>Download your full dataset, or read the cohort report in full. Yours to hold onto, with or without us.</p><a class="btn btn-primary" href="#">Download your data</a></section>
+<footer><div class="fm">Ēnel Health<sup style="font-size:.5em;vertical-align:super;opacity:.6">&reg;</sup></div>
+  <div class="ft"><a href="fasting_landing.html">Overview</a> &middot; <a href="fasting_join.html">Join</a> &middot; <a href="fasting_payoff.html">Result</a></div></footer></body></html>

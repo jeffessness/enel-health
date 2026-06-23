@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ēnel Health · Digital Sunset Sleep Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --serif:'Playfair Display',Georgia,serif;
+    --sans:'Inter',-apple-system,Segoe UI,sans-serif;
+    /* SPLIT-TEST VARIABLE — swap --hero (or load ?v=a|b|c) to test dark grounds */
+    --hero:#091523;            /* c · charcoal abyss (default for Sleep) */
+    --hero-fg:#F2ECDF;
+    --hero-dim:#94a2b6;
+    --bone:#ECE4D6;
+    --ink:#23303d;
+    --bone-dim:#6c6456;
+    --accent:#BD5B39;
+    --hair-bone:rgba(35,48,61,.16);
+    --hair-hero:rgba(242,236,223,.14);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--bone);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5}
+  .shell{max-width:1180px;margin:0 auto;padding:0 28px}
+  .hero{background:var(--hero);color:var(--hero-fg);min-height:100svh;display:flex;flex-direction:column;position:relative;overflow:hidden}
+  .hero .shell{display:flex;flex-direction:column;flex:1;padding-top:30px;padding-bottom:54px}
+  .hero-top{display:flex;justify-content:space-between;align-items:baseline;gap:18px}
+  .brand{font-family:var(--serif);font-size:20px;letter-spacing:.01em}.brand sup{font-size:.46em;vertical-align:super;opacity:.6}
+  .founding{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--hero-dim);text-align:right}
+  .signal{flex:1;display:block;width:100%;min-height:200px;margin:6px 0 0}
+  .hero-type{max-width:32rem}
+  .eyebrow{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--accent);margin-bottom:18px}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(36px,7.6vw,58px);line-height:1.04;letter-spacing:-.015em;max-width:15ch}
+  .lede{font-size:clamp(16px,2.2vw,18px);line-height:1.62;color:var(--hero-dim);max-width:42ch;margin-top:22px}
+  .actions{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:34px}
+  .enroll{display:inline-block;background:var(--accent);color:var(--hero-fg);text-decoration:none;font-size:16px;letter-spacing:.01em;padding:15px 30px;border-radius:2px;transition:background .18s}
+  .enroll:hover{background:#a64d2f}
+  .see{color:var(--hero-fg);text-decoration:none;font-size:15px;border-bottom:1px solid var(--accent);padding-bottom:3px;transition:color .18s}
+  .see:hover{color:var(--accent)}
+  .trust{font-size:13.5px;color:var(--hero-dim);margin-top:30px;max-width:46ch}
+  .why{padding:96px 0 30px}.why .shell{max-width:760px}
+  .why-h{font-family:var(--serif);font-weight:500;font-size:clamp(26px,4.4vw,36px);line-height:1.12;letter-spacing:-.01em;max-width:18ch;margin-bottom:8px}
+  .point{padding:40px 0;border-top:1px solid var(--hair-bone)}.point:first-of-type{border-top:0;padding-top:34px}
+  .p-lead{font-family:var(--serif);font-weight:500;font-size:clamp(21px,3.2vw,26px);line-height:1.25;margin-bottom:12px}
+  .p-sub{font-size:16px;line-height:1.62;color:var(--bone-dim);max-width:52ch}
+  .faq{padding:60px 0 0}.faq .shell{max-width:760px}
+  .faq-h{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(22px,3.6vw,30px);margin-bottom:18px}
+  details{border-top:1px solid var(--hair-bone)}
+  summary{list-style:none;cursor:pointer;padding:24px 36px 24px 0;position:relative;font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.35}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"";position:absolute;right:6px;top:31px;width:13px;height:1px;background:var(--ink)}
+  summary::before{content:"";position:absolute;right:12px;top:25px;width:1px;height:13px;background:var(--ink);transition:opacity .2s}
+  details[open] summary::before{opacity:0}
+  .answer{padding:0 0 26px;font-size:15.5px;line-height:1.66;color:var(--bone-dim);max-width:60ch}
+  .close{padding:74px 0 90px;margin-top:40px;border-top:1px solid var(--hair-bone)}
+  .close .shell{max-width:760px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:26px}
+  .close-line{font-family:var(--serif);font-size:clamp(20px,3vw,26px);max-width:16ch;line-height:1.2}
+  .enroll.dark{background:var(--accent);color:var(--bone)}.enroll.dark:hover{background:#a64d2f}
+  .colophon{padding:0 0 70px}.colophon .shell{max-width:760px;color:var(--bone-dim)}
+  .colophon .mark{font-family:var(--serif);font-size:17px;color:var(--ink)}.colophon .tag{font-size:13.5px;margin-top:6px}
+  @media(min-width:880px){.hero .shell{padding-bottom:72px}.hero-type{max-width:none}.lede{margin-top:24px}}
+</style>
+<style>
+.flownav{position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:11px 22px;background:var(--hero);color:var(--hero-fg);border-bottom:1px solid var(--hair-hero);font-family:var(--sans)}
+.flownav .fn-home{font-family:var(--serif);font-size:15px;color:var(--hero-fg);text-decoration:none;opacity:.85}
+.flownav .fn-home:hover{opacity:1}
+.flownav .fn-links{display:flex;gap:18px}
+.flownav .fn-links a{font-size:13.5px;color:var(--hero-fg);text-decoration:none;opacity:.62;padding-bottom:3px;border-bottom:1px solid transparent}
+.flownav .fn-links a:hover{opacity:1}
+.flownav .fn-links a.on{opacity:1;color:var(--accent);border-bottom-color:var(--accent)}
+.hero{min-height:calc(100svh - 50px)}
+</style>
+</head>
+<body>
+<nav class="flownav">
+  <a class="fn-home" href="../index.html">‹ All studies</a>
+  <span class="fn-links"><a href="landing.html" class="on">Overview</a><a href="join.html">Join</a><a href="payoff.html">Results</a></span>
+</nav>
+<header class="hero">
+  <div class="shell">
+    <div class="hero-top">
+      <span class="brand">Ēnel Health<sup>®</sup></span>
+      <span class="founding">Founding member<br>one of one thousand</span>
+    </div>
+    <svg class="signal" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <!-- dusk: a low moon arc, a few faint points, and one settling curve toward the horizon -->
+      <line x1="0" y1="232" x2="1000" y2="232" stroke="var(--hair-hero)" stroke-width="1"/>
+      <circle cx="858" cy="96" r="40" fill="none" stroke="var(--accent)" stroke-width="1.3" opacity=".75"/>
+      <circle cx="842" cy="86" r="40" fill="var(--hero)"/>
+      <circle cx="150" cy="70" r="1.4" fill="var(--hero-fg)" opacity=".55"/>
+      <circle cx="300" cy="120" r="1.1" fill="var(--hero-fg)" opacity=".4"/>
+      <circle cx="470" cy="58" r="1.3" fill="var(--hero-fg)" opacity=".5"/>
+      <path d="M120,120 C300,128 430,158 600,190 S860,224 900,228" fill="none" stroke="var(--accent)" stroke-width="2"/>
+      <circle cx="900" cy="228" r="3.5" fill="var(--accent)"/>
+    </svg>
+    <div class="hero-type">
+      <p class="eyebrow">The Digital Sunset Study</p>
+      <h1 data-alt="Does the screen-free hour actually work?">You put the phone down every night. See if it buys you better sleep.</h1>
+      <p class="lede" data-alt-lede="Giving up the phone before bed is a real nightly cost. Find out if it buys better sleep, with no device brand or influencer in the middle.">Giving up the screen before bed is a small nightly sacrifice. See whether it actually buys you better sleep, uninfluenced by anyone selling you sleep advice.</p>
+      <div class="actions">
+        <a class="enroll" href="join.html">Join the study</a>
+        <a class="see" href="payoff.html">See what you keep</a>
+      </div>
+      <p class="trust">Real-world evidence, community-powered. Free for founding members, forever.</p>
+    </div>
+  </div>
+</header>
+<section class="why" id="enroll">
+  <div class="shell">
+    <h2 class="why-h">What you walk away with.</h2>
+    <div class="point"><p class="p-lead">Know if the nightly sacrifice pays off.</p><p class="p-sub">See whether putting the phone down really changes how you sleep, against your own nights before.</p></div>
+    <div class="point"><p class="p-lead">No one is profiting from the result.</p><p class="p-sub">An uninfluenced read, with no device brand or influencer in the middle.</p></div>
+    <div class="point"><p class="p-lead">A place in answering it for everyone.</p><p class="p-sub">Help produce the first real evidence on this, free for founding members, forever.</p></div>
+  </div>
+</section>
+<section class="faq">
+  <div class="shell">
+    <p class="faq-h">Before you enroll.</p>
+    <details open><summary>How do you measure my sleep, and do I need a wearable or device?</summary><div class="answer">No wearable required. You log it yourself each morning: how long it took to fall asleep, how deeply you slept, how often you woke, and how you felt the next day. If you own a sleep tracker you can fold it in, but your own report is enough.</div></details>
+    <details><summary>What does the digital sunset actually require each night, and how strict is it?</summary><div class="answer">As strict as the protocol you choose. The gentlest is sixty screen-free minutes before bed; the next is a ninety-minute wind-down with reading, stretching, or journaling; the deepest is a full evening tech detox. You pick the one that fits your life and hold it for the run.</div></details>
+    <details><summary>What if I already sleep badly, or already sleep fine?</summary><div class="answer">Both are worth knowing. If you sleep badly, you find out whether the screen-free hour actually moves anything for you. If you sleep fine, your nights become part of the evidence on whether it matters for people who already do — measured against your own baseline either way.</div></details>
+    <details><summary>What do I actually have to do, and how long does it run?</summary><div class="answer">Hold your chosen screen-free routine each night, and spend a minute each morning logging how you slept. Protocols run 14 to 30 days. That's it — the sacrifice is the phone, not your time.</div></details>
+    <details><summary>What will I see at the end, and who can see my data?</summary><div class="answer">You see your own result first — your sleep against your nights before — then the cohort report: the effect size, its uncertainty, and the open questions. Your raw data stays yours and is never sold; anything published is combined across members and stripped of names, and founding members keep theirs forever.</div></details>
+  </div>
+</section>
+<section class="close">
+  <div class="shell">
+    <p class="close-line">A thousand founding places, then they're gone.</p>
+    <a class="enroll dark" href="join.html">Join the study</a>
+  </div>
+</section>
+<footer class="colophon">
+  <div class="shell">
+    <div class="mark">Ēnel Health<sup style="font-size:.46em;vertical-align:super;opacity:.6">®</sup></div>
+    <div class="tag">Real-world evidence, community-powered.</div>
+  </div>
+</footer>
+<script>
+/* Ēnel split-test harness — read query params, set scheme tokens.
+   g=ground (a navy · b petrol · c charcoal · d bone/light)
+   acc=accent (t terracotta · s signal red · r brass)
+   h=headline variant (2 = alternate copy, landings only)
+   Defaults live in each page's :root; this only overrides when a param is present. */
+(function () {
+  var q = new URLSearchParams(location.search);
+  var rs = document.documentElement.style;
+
+  var grounds = {
+    a: ['#0E1E33', '#F2ECDF', '#9aa7ba', 'rgba(242,236,223,.15)'], // ocean navy
+    b: ['#0F3B40', '#F2ECDF', '#9bb0ad', 'rgba(242,236,223,.15)'], // petrol
+    c: ['#091523', '#F2ECDF', '#94a2b6', 'rgba(242,236,223,.14)'], // charcoal abyss
+    d: ['#ECE4D6', '#23303d', '#6c6456', 'rgba(35,48,61,.16)']     // bone, inverted (dark type)
+  };
+  var g = q.get('g') || q.get('v'); // v kept for back-compat
+  if (g && grounds[g]) {
+    var s = grounds[g];
+    rs.setProperty('--hero', s[0]);
+    rs.setProperty('--hero-fg', s[1]);
+    rs.setProperty('--hero-dim', s[2]);
+    rs.setProperty('--hair-hero', s[3]);
+  }
+
+  var accents = { t: '#BD5B39', s: '#A8362B', r: '#B0883F' };
+  var ac = q.get('acc');
+  if (ac && accents[ac]) rs.setProperty('--accent', accents[ac]);
+
+  // keep the solid CTA legible on any ground/accent combination
+  var st = document.createElement('style');
+  st.textContent =
+    '.enroll,.enroll.dark{color:#F2ECDF}' +
+    '.enroll:hover,.enroll.dark:hover{background:var(--accent);filter:brightness(.93)}';
+  document.head.appendChild(st);
+
+  // headline / copy variant (landings carry data-alt / data-alt-lede)
+  if (q.get('h') === '2') {
+    var t = document.querySelector('h1[data-alt]');
+    if (t) t.textContent = t.getAttribute('data-alt');
+    var l = document.querySelector('.lede[data-alt-lede]');
+    if (l) l.textContent = l.getAttribute('data-alt-lede');
+  }
+
+  // keep the chosen scheme across the whole flow: carry params onto internal links
+  var qs = location.search;
+  if (qs) {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (/^[\w./-]+\.html$/.test(h)) a.setAttribute('href', h + qs);
+    });
+  }
+})();
+</script>
+</body>
+</html>

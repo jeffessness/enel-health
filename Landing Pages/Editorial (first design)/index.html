@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ēnel · Founding-member pages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--serif:'Playfair Display',Georgia,serif;--sans:'Inter',-apple-system,Segoe UI,sans-serif;
+    --bone:#ECE4D6;--ink:#23303d;--dim:#6c6456;--accent:#BD5B39;--hair:rgba(35,48,61,.16)}
+  body{font-family:var(--sans);background:var(--bone);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:60px 28px 90px}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,5.5vw,46px);letter-spacing:-.01em;line-height:1.06}
+  .sub{color:var(--dim);font-size:16px;margin-top:14px;max-width:58ch}
+  .study{padding:34px 0;border-top:1px solid var(--hair)}
+  .study:first-of-type{margin-top:26px}
+  .sn{font-family:var(--serif);font-weight:500;font-size:clamp(23px,3.6vw,30px);margin-bottom:18px}
+  .links{display:grid;grid-template-columns:1fr;gap:12px}
+  .links a{display:flex;align-items:baseline;gap:12px;text-decoration:none;color:var(--ink);font-family:var(--serif);font-size:20px;
+    padding:14px 18px;border:1px solid var(--hair);border-radius:3px;background:#F3EEE3;transition:border-color .15s,background .15s}
+  .links a:hover{border-color:var(--accent);background:#fff}
+  .links a span{font-family:var(--sans);font-size:13.5px;color:var(--dim)}
+  .extra{margin-top:46px;padding-top:30px;border-top:1px solid var(--hair);display:flex;flex-wrap:wrap;gap:14px}
+  .extra a{text-decoration:none;font-size:15px;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
+  .note{color:var(--dim);font-size:13.5px;margin-top:14px;max-width:60ch}
+  footer{margin-top:54px;color:var(--dim);font-size:13.5px}.footer-m{font-family:var(--serif);font-size:16px;color:var(--ink)}
+  @media(min-width:680px){.links{grid-template-columns:1fr 1fr 1fr}.links a{flex-direction:column;gap:5px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Founding-member pages.</h1>
+  <p class="sub">Every page, grouped by study. Open any one and use the bar at the top to move between Overview, Join, and Results.</p>
+    <div class="study">
+      <div class="sn">Peptides</div>
+      <div class="links">
+        <a href="Peptide/landing.html">Overview <span>the landing page</span></a>
+        <a href="Peptide/join.html">Join <span>enroll + protocols</span></a>
+        <a href="Peptide/payoff.html">Results <span>the payoff page</span></a>
+      </div>
+    </div>
+    <div class="study">
+      <div class="sn">Fasting</div>
+      <div class="links">
+        <a href="Fasting/landing.html">Overview <span>the landing page</span></a>
+        <a href="Fasting/join.html">Join <span>enroll + protocols</span></a>
+        <a href="Fasting/payoff.html">Results <span>the payoff page</span></a>
+      </div>
+    </div>
+    <div class="study">
+      <div class="sn">Digital Sunset Sleep</div>
+      <div class="links">
+        <a href="Sleep/landing.html">Overview <span>the landing page</span></a>
+        <a href="Sleep/join.html">Join <span>enroll + protocols</span></a>
+        <a href="Sleep/payoff.html">Results <span>the payoff page</span></a>
+      </div>
+    </div>
+  <div class="extra">
+    <a href="Join hub/join-a-study.html">Join-a-study hub →</a>
+    <a href="Split-test/index.html">Split-test launcher →</a>
+  </div>
+  <p class="note">The study folders above are self-contained — drop any single file into a site as-is. The Split-test launcher drives color and headline versions by URL parameter.</p>
+  <footer><div class="footer-m">Ēnel Health<sup style="font-size:.5em;vertical-align:super;opacity:.6">®</sup></div>
+  <div style="margin-top:6px">Real-world evidence, community-powered.</div></footer>
+</div>
+</body>
+</html>

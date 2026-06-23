@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ēnel Health · Fasting Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --serif:'Playfair Display',Georgia,serif;
+    --sans:'Inter',-apple-system,Segoe UI,sans-serif;
+    /* SPLIT-TEST VARIABLE — swap --hero (or load ?v=a|b|c) to test dark grounds */
+    --hero:#0F3B40;            /* b · petrol (default for Fasting) */
+    --hero-fg:#F2ECDF;
+    --hero-dim:#9bb0ad;
+    --bone:#ECE4D6;
+    --ink:#23303d;
+    --bone-dim:#6c6456;
+    --accent:#BD5B39;
+    --hair-bone:rgba(35,48,61,.16);
+    --hair-hero:rgba(242,236,223,.15);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--bone);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5}
+  .shell{max-width:1180px;margin:0 auto;padding:0 28px}
+  .hero{background:var(--hero);color:var(--hero-fg);min-height:100svh;display:flex;flex-direction:column;position:relative;overflow:hidden}
+  .hero .shell{display:flex;flex-direction:column;flex:1;padding-top:30px;padding-bottom:54px}
+  .hero-top{display:flex;justify-content:space-between;align-items:baseline;gap:18px}
+  .brand{font-family:var(--serif);font-size:20px;letter-spacing:.01em}.brand sup{font-size:.46em;vertical-align:super;opacity:.6}
+  .founding{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--hero-dim);text-align:right}
+  .signal{flex:1;display:block;width:100%;min-height:200px;margin:6px 0 0}
+  .hero-type{max-width:32rem}
+  .eyebrow{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--accent);margin-bottom:18px}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(38px,8.4vw,64px);line-height:1.03;letter-spacing:-.015em;max-width:13ch}
+  .lede{font-size:clamp(16px,2.2vw,18px);line-height:1.62;color:var(--hero-dim);max-width:42ch;margin-top:22px}
+  .actions{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:34px}
+  .enroll{display:inline-block;background:var(--accent);color:var(--hero-fg);text-decoration:none;font-size:16px;letter-spacing:.01em;padding:15px 30px;border-radius:2px;transition:background .18s}
+  .enroll:hover{background:#a64d2f}
+  .see{color:var(--hero-fg);text-decoration:none;font-size:15px;border-bottom:1px solid var(--accent);padding-bottom:3px;transition:color .18s}
+  .see:hover{color:var(--accent)}
+  .trust{font-size:13.5px;color:var(--hero-dim);margin-top:30px;max-width:46ch}
+  .why{padding:96px 0 30px}.why .shell{max-width:760px}
+  .why-h{font-family:var(--serif);font-weight:500;font-size:clamp(26px,4.4vw,36px);line-height:1.12;letter-spacing:-.01em;max-width:18ch;margin-bottom:8px}
+  .point{padding:40px 0;border-top:1px solid var(--hair-bone)}.point:first-of-type{border-top:0;padding-top:34px}
+  .p-lead{font-family:var(--serif);font-weight:500;font-size:clamp(21px,3.2vw,26px);line-height:1.25;margin-bottom:12px}
+  .p-sub{font-size:16px;line-height:1.62;color:var(--bone-dim);max-width:52ch}
+  .faq{padding:60px 0 0}.faq .shell{max-width:760px}
+  .faq-h{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(22px,3.6vw,30px);margin-bottom:18px}
+  details{border-top:1px solid var(--hair-bone)}
+  summary{list-style:none;cursor:pointer;padding:24px 36px 24px 0;position:relative;font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.35}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"";position:absolute;right:6px;top:31px;width:13px;height:1px;background:var(--ink)}
+  summary::before{content:"";position:absolute;right:12px;top:25px;width:1px;height:13px;background:var(--ink);transition:opacity .2s}
+  details[open] summary::before{opacity:0}
+  .answer{padding:0 0 26px;font-size:15.5px;line-height:1.66;color:var(--bone-dim);max-width:60ch}
+  .close{padding:74px 0 90px;margin-top:40px;border-top:1px solid var(--hair-bone)}
+  .close .shell{max-width:760px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:26px}
+  .close-line{font-family:var(--serif);font-size:clamp(20px,3vw,26px);max-width:16ch;line-height:1.2}
+  .enroll.dark{background:var(--accent);color:var(--bone)}.enroll.dark:hover{background:#a64d2f}
+  .colophon{padding:0 0 70px}.colophon .shell{max-width:760px;color:var(--bone-dim)}
+  .colophon .mark{font-family:var(--serif);font-size:17px;color:var(--ink)}.colophon .tag{font-size:13.5px;margin-top:6px}
+  @media(min-width:880px){.hero .shell{padding-bottom:72px}.hero-type{max-width:none}.lede{margin-top:24px}}
+</style>
+<style>
+.flownav{position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:11px 22px;background:var(--hero);color:var(--hero-fg);border-bottom:1px solid var(--hair-hero);font-family:var(--sans)}
+.flownav .fn-home{font-family:var(--serif);font-size:15px;color:var(--hero-fg);text-decoration:none;opacity:.85}
+.flownav .fn-home:hover{opacity:1}
+.flownav .fn-links{display:flex;gap:18px}
+.flownav .fn-links a{font-size:13.5px;color:var(--hero-fg);text-decoration:none;opacity:.62;padding-bottom:3px;border-bottom:1px solid transparent}
+.flownav .fn-links a:hover{opacity:1}
+.flownav .fn-links a.on{opacity:1;color:var(--accent);border-bottom-color:var(--accent)}
+.hero{min-height:calc(100svh - 50px)}
+</style>
+</head>
+<body>
+<nav class="flownav">
+  <a class="fn-home" href="../index.html">‹ All studies</a>
+  <span class="fn-links"><a href="landing.html" class="on">Overview</a><a href="join.html">Join</a><a href="payoff.html">Results</a></span>
+</nav>
+<header class="hero">
+  <div class="shell">
+    <div class="hero-top">
+      <span class="brand">Ēnel Health<sup>®</sup></span>
+      <span class="founding">Founding member<br>one of one thousand</span>
+    </div>
+    <svg class="signal" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <line x1="0" y1="214" x2="1000" y2="214" stroke="var(--hair-hero)" stroke-width="1"/>
+      <line x1="120" y1="186" x2="880" y2="186" stroke="var(--hero-dim)" stroke-width="1" stroke-dasharray="2 7" opacity=".55"/>
+      <!-- the window: one quiet crest rising off the baseline and returning -->
+      <path d="M120,186 C300,186 350,78 500,78 C650,78 700,186 880,186" fill="none" stroke="var(--accent)" stroke-width="2"/>
+      <circle cx="500" cy="78" r="3.5" fill="var(--accent)"/>
+      <circle cx="120" cy="186" r="2.5" fill="var(--hero-fg)" opacity=".8"/>
+      <circle cx="880" cy="186" r="2.5" fill="var(--hero-fg)" opacity=".8"/>
+    </svg>
+    <div class="hero-type">
+      <p class="eyebrow">The Fasting Study</p>
+      <h1 data-alt="Is the fasting window doing anything?">The fasting window, measured against your baseline.</h1>
+      <p class="lede" data-alt-lede="You keep the discipline. Now find out what it actually changes, measured against where you started and free of anyone selling a plan.">You keep the discipline. Now see if it pays off, measured against where you started, and uninfluenced by anyone selling a plan.</p>
+      <div class="actions">
+        <a class="enroll" href="join.html">Join the study</a>
+        <a class="see" href="payoff.html">See what you keep</a>
+      </div>
+      <p class="trust">Real-world evidence, community-powered. Free for founding members, forever.</p>
+    </div>
+  </div>
+</header>
+<section class="why" id="enroll">
+  <div class="shell">
+    <h2 class="why-h">What you walk away with.</h2>
+    <div class="point"><p class="p-lead">Proof the discipline is worth it.</p><p class="p-sub">Find out what the fasting window actually changes for you, measured against where you started.</p></div>
+    <div class="point"><p class="p-lead">Your own answer, not the internet's.</p><p class="p-sub">An uninfluenced read, free of coaches, apps, and protocols.</p></div>
+    <div class="point"><p class="p-lead">A result you can keep.</p><p class="p-sub">Your data, published in full and yours to hold onto, free for founding members.</p></div>
+  </div>
+</section>
+<section class="faq">
+  <div class="shell">
+    <p class="faq-h">Before you enroll.</p>
+    <details open><summary>Do I follow my own fasting schedule, or does the study set one?</summary><div class="answer">Your own. You match to the protocol closest to what you already do — 12:12, 16:8, one meal a day, a longer fast — and keep your own rhythm. We observe and measure against where you started; we don't hand you a plan to follow.</div></details>
+    <details><summary>Do I have to change what or how I eat?</summary><div class="answer">No. Eat the way you already eat — this study is about the fasting window, not a diet we put you on. All we ask is that you report it honestly.</div></details>
+    <details><summary>Is fasting safe for me, especially if I take medication or have a health condition?</summary><div class="answer">Fasting isn't safe for everyone. Don't start a protocol if you're pregnant or breastfeeding, have a current or past eating disorder, take diabetes medication (especially insulin or sulfonylureas, a common class of blood-sugar pills), have a chronic condition, or are under 18 — and talk to your physician first either way. The study is observational, not medical advice; if a question needs a clinician, see one.</div></details>
+    <details><summary>What do I have to track, and do I need a wearable or device?</summary><div class="answer">No wearable needed. Once a day you log how you felt — mood, energy, sleep, hunger, cravings, focus — in about a minute. If you already wear a tracker you're welcome to add it, but the study runs fine on your own honest report.</div></details>
+    <details><summary>What will I see at the end, and how long does it run?</summary><div class="answer">Most protocols run 7 to 30 days. At the end you see your own result first — what the window changed, measured against where you started — then the cohort report in full: the effect size, its uncertainty, and what's still unsettled. Your data stays yours, free for founding members.</div></details>
+  </div>
+</section>
+<section class="close">
+  <div class="shell">
+    <p class="close-line">A thousand founding places, then they're gone.</p>
+    <a class="enroll dark" href="join.html">Join the study</a>
+  </div>
+</section>
+<footer class="colophon">
+  <div class="shell">
+    <div class="mark">Ēnel Health<sup style="font-size:.46em;vertical-align:super;opacity:.6">®</sup></div>
+    <div class="tag">Real-world evidence, community-powered.</div>
+  </div>
+</footer>
+<script>
+/* Ēnel split-test harness — read query params, set scheme tokens.
+   g=ground (a navy · b petrol · c charcoal · d bone/light)
+   acc=accent (t terracotta · s signal red · r brass)
+   h=headline variant (2 = alternate copy, landings only)
+   Defaults live in each page's :root; this only overrides when a param is present. */
+(function () {
+  var q = new URLSearchParams(location.search);
+  var rs = document.documentElement.style;
+
+  var grounds = {
+    a: ['#0E1E33', '#F2ECDF', '#9aa7ba', 'rgba(242,236,223,.15)'], // ocean navy
+    b: ['#0F3B40', '#F2ECDF', '#9bb0ad', 'rgba(242,236,223,.15)'], // petrol
+    c: ['#091523', '#F2ECDF', '#94a2b6', 'rgba(242,236,223,.14)'], // charcoal abyss
+    d: ['#ECE4D6', '#23303d', '#6c6456', 'rgba(35,48,61,.16)']     // bone, inverted (dark type)
+  };
+  var g = q.get('g') || q.get('v'); // v kept for back-compat
+  if (g && grounds[g]) {
+    var s = grounds[g];
+    rs.setProperty('--hero', s[0]);
+    rs.setProperty('--hero-fg', s[1]);
+    rs.setProperty('--hero-dim', s[2]);
+    rs.setProperty('--hair-hero', s[3]);
+  }
+
+  var accents = { t: '#BD5B39', s: '#A8362B', r: '#B0883F' };
+  var ac = q.get('acc');
+  if (ac && accents[ac]) rs.setProperty('--accent', accents[ac]);
+
+  // keep the solid CTA legible on any ground/accent combination
+  var st = document.createElement('style');
+  st.textContent =
+    '.enroll,.enroll.dark{color:#F2ECDF}' +
+    '.enroll:hover,.enroll.dark:hover{background:var(--accent);filter:brightness(.93)}';
+  document.head.appendChild(st);
+
+  // headline / copy variant (landings carry data-alt / data-alt-lede)
+  if (q.get('h') === '2') {
+    var t = document.querySelector('h1[data-alt]');
+    if (t) t.textContent = t.getAttribute('data-alt');
+    var l = document.querySelector('.lede[data-alt-lede]');
+    if (l) l.textContent = l.getAttribute('data-alt-lede');
+  }
+
+  // keep the chosen scheme across the whole flow: carry params onto internal links
+  var qs = location.search;
+  if (qs) {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (/^[\w./-]+\.html$/.test(h)) a.setAttribute('href', h + qs);
+    });
+  }
+})();
+</script>
+</body>
+</html>

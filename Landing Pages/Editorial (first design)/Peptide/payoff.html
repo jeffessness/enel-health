@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ēnel Health · Peptide Study — Your Result</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --serif:'Playfair Display',Georgia,serif;
+    --sans:'Inter',-apple-system,Segoe UI,sans-serif;
+    --hero:#0E1E33; --hero-fg:#F2ECDF; --hero-dim:#9aa7ba;
+    --bone:#ECE4D6; --ink:#23303d; --bone-dim:#6c6456;
+    --accent:#BD5B39;
+    --hair-bone:rgba(35,48,61,.16); --hair-hero:rgba(242,236,223,.15);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--bone);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5}
+  .shell{max-width:1180px;margin:0 auto;padding:0 28px}
+
+  /* SCROLL 1 · result (dark, the wake is the subject) */
+  .result{background:var(--hero);color:var(--hero-fg);min-height:100svh;display:flex;flex-direction:column;overflow:hidden}
+  .result .shell{display:flex;flex-direction:column;flex:1;padding-top:30px;padding-bottom:54px}
+  .r-top{display:flex;justify-content:space-between;align-items:baseline;gap:18px}
+  .brand{font-family:var(--serif);font-size:20px}.brand sup{font-size:.46em;vertical-align:super;opacity:.6}
+  .season{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--hero-dim)}
+  .wake{flex:1;display:block;width:100%;min-height:230px;margin-top:8px}
+  .r-type{max-width:40rem}
+  .eyebrow{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--accent);margin-bottom:18px}
+  .r-type h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,6.4vw,52px);line-height:1.08;letter-spacing:-.01em;max-width:18ch}
+  .r-type h1 em{font-style:normal;color:var(--accent)}
+  .r-meta{font-size:15px;line-height:1.6;color:var(--hero-dim);margin-top:20px;max-width:44ch}
+  .r-honest{font-size:14.5px;line-height:1.6;color:var(--hero-dim);margin-top:14px;max-width:40ch;opacity:.85}
+  .r-note{font-size:12.5px;color:var(--hero-dim);opacity:.7;padding-bottom:6px}
+
+  /* generic bone sections */
+  .sec{padding:96px 0 30px}
+  .sec .shell{max-width:760px}
+  .sec-h{font-family:var(--serif);font-weight:500;font-size:clamp(26px,4.4vw,36px);line-height:1.12;letter-spacing:-.01em;max-width:18ch;margin-bottom:6px}
+  .point{padding:38px 0;border-top:1px solid var(--hair-bone)}
+  .point:first-of-type{border-top:0;padding-top:32px}
+  .p-lead{font-family:var(--serif);font-weight:500;font-size:clamp(20px,3vw,25px);line-height:1.25;margin-bottom:11px}
+  .p-sub{font-size:16px;line-height:1.62;color:var(--bone-dim);max-width:52ch}
+
+  /* cohort density */
+  .cohort{padding:30px 0 0}
+  .cohort .shell{max-width:760px}
+  .cohort h3{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,3.2vw,26px);margin-bottom:14px}
+  .cohort p{font-size:16px;line-height:1.62;color:var(--bone-dim);max-width:50ch;margin-bottom:26px}
+  .density{width:100%;max-width:620px;display:block}
+  .axislab{font-family:var(--sans);font-size:11px;letter-spacing:.04em;fill:var(--bone-dim)}
+
+  /* keep list */
+  .keep{padding:84px 0 0}
+  .keep .shell{max-width:760px}
+  .krow{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:26px 0;border-top:1px solid var(--hair-bone)}
+  .krow:first-of-type{border-top:0}
+  .k-name{font-family:var(--serif);font-weight:500;font-size:20px}
+  .k-sub{font-size:14.5px;color:var(--bone-dim);margin-top:4px;max-width:42ch}
+  .k-act{color:var(--accent);text-decoration:none;font-size:15px;border-bottom:1px solid var(--accent);padding-bottom:2px;white-space:nowrap}
+  .k-act.static{color:var(--bone-dim);border-bottom:0;font-style:italic;font-family:var(--serif)}
+
+  .close{padding:78px 0 90px;margin-top:46px;border-top:1px solid var(--hair-bone)}
+  .close .shell{max-width:760px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:26px}
+  .close-line{font-family:var(--serif);font-size:clamp(20px,3vw,26px);max-width:18ch;line-height:1.2}
+  .back{color:var(--bone-dim);text-decoration:none;font-style:italic;font-family:var(--serif);font-size:16px;border-bottom:1px solid var(--hair-bone);padding-bottom:3px}
+  .colophon{padding:0 0 70px}.colophon .shell{max-width:760px}
+  .colophon .mark{font-family:var(--serif);font-size:17px}.colophon .tg{font-size:13.5px;color:var(--bone-dim);margin-top:6px}
+
+  @media(min-width:880px){ .result .shell{padding-bottom:72px} }
+</style>
+<style>
+.flownav{position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:11px 22px;background:var(--hero);color:var(--hero-fg);border-bottom:1px solid var(--hair-hero);font-family:var(--sans)}
+.flownav .fn-home{font-family:var(--serif);font-size:15px;color:var(--hero-fg);text-decoration:none;opacity:.85}
+.flownav .fn-home:hover{opacity:1}
+.flownav .fn-links{display:flex;gap:18px}
+.flownav .fn-links a{font-size:13.5px;color:var(--hero-fg);text-decoration:none;opacity:.62;padding-bottom:3px;border-bottom:1px solid transparent}
+.flownav .fn-links a:hover{opacity:1}
+.flownav .fn-links a.on{opacity:1;color:var(--accent);border-bottom-color:var(--accent)}
+.hero{min-height:calc(100svh - 50px)}
+</style>
+</head>
+<body>
+<nav class="flownav">
+  <a class="fn-home" href="../index.html">‹ All studies</a>
+  <span class="fn-links"><a href="landing.html">Overview</a><a href="join.html">Join</a><a href="payoff.html" class="on">Results</a></span>
+</nav>
+
+<!-- SCROLL 1 · your result -->
+<header class="result">
+  <div class="shell">
+    <div class="r-top">
+      <span class="brand">Ēnel Health<sup>®</sup></span>
+      <span class="season">Season one · complete</span>
+    </div>
+
+    <svg class="wake" viewBox="0 0 1000 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <line x1="0" y1="236" x2="1000" y2="236" stroke="var(--hair-hero)" stroke-width="1"/>
+      <line x1="110" y1="208" x2="900" y2="208" stroke="var(--hero-dim)" stroke-width="1" stroke-dasharray="2 7" opacity=".55"/>
+      <text x="110" y="196" class="axislab" style="fill:var(--hero-dim);opacity:.7">your baseline · day 0</text>
+      <path d="M110,208 C330,204 470,188 620,150 S880,72 950,52" fill="none" stroke="var(--accent)" stroke-width="2.2"/>
+      <circle cx="950" cy="52" r="4" fill="var(--accent)"/>
+      <circle cx="950" cy="52" r="10" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".5"/>
+      <circle cx="110" cy="208" r="2.6" fill="var(--hero-fg)" opacity=".85"/>
+      <text x="950" y="38" text-anchor="end" class="axislab" style="fill:var(--accent)">week 12</text>
+    </svg>
+
+    <div class="r-type">
+      <p class="eyebrow">Your result</p>
+      <h1>Against your own baseline, your marker rose <em>18%</em>.</h1>
+      <p class="r-meta">A real move, not a rounding error: the 95% confidence interval runs from 9% to 27% over twelve weeks.</p>
+      <p class="r-honest">Some members saw no change at all. This is your number, measured against where you started, not a brand's average.</p>
+    </div>
+  </div>
+  <div class="shell"><p class="r-note">Sample readout. Your own figures appear here the day your season closes.</p></div>
+</header>
+
+<!-- SCROLL 2 · uninfluenced + your say -->
+<section class="sec">
+  <div class="shell">
+    <h2 class="sec-h">A read nobody sold you.</h2>
+    <div class="point">
+      <p class="p-lead">The endpoint was locked before you enrolled.</p>
+      <p class="p-sub">The protocol was published on day one and never moved. Nothing was adjusted after the data came in to make the number look better.</p>
+    </div>
+    <div class="point">
+      <p class="p-lead">Nobody profited from this result.</p>
+      <p class="p-sub">No manufacturer, creator, or seller funded the study, so there was no answer anyone needed it to give.</p>
+    </div>
+    <div class="point">
+      <p class="p-lead">Every reading behind it is yours to open.</p>
+      <p class="p-sub">The figure above is built only from data you can inspect, point by point.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cohort">
+  <div class="shell">
+    <h3>Your say in the question.</h3>
+    <p>You are one of a thousand. Your reading is now part of the first independent answer on whether this peptide does anything — and here is where you fell.</p>
+    <svg class="density" viewBox="0 0 1000 280" preserveAspectRatio="xMidYMid meet" aria-label="Where your result fell within the cohort">
+      <line x1="40" y1="222" x2="960" y2="222" stroke="var(--hair-bone)" stroke-width="1"/>
+      <path d="M60,222 C220,220 300,176 420,132 C500,102 560,78 540,78 C520,78 600,102 680,132 C800,176 860,220 960,222 Z"
+            fill="var(--accent)" opacity=".14"/>
+      <path d="M60,222 C220,220 300,176 420,132 C500,102 560,78 540,78 C520,78 600,102 680,132 C800,176 860,220 960,222"
+            fill="none" stroke="var(--accent)" stroke-width="1.6" opacity=".55"/>
+      <line x1="650" y1="222" x2="650" y2="118" stroke="var(--ink)" stroke-width="1.4"/>
+      <circle cx="650" cy="118" r="4.5" fill="var(--ink)"/>
+      <text x="650" y="104" text-anchor="middle" class="axislab" style="fill:var(--ink)">you</text>
+      <text x="40" y="248" class="axislab">no change</text>
+      <text x="960" y="248" text-anchor="end" class="axislab">strong response</text>
+      <text x="500" y="270" text-anchor="middle" class="axislab">the cohort · one thousand readings</text>
+    </svg>
+  </div>
+</section>
+
+<!-- SCROLL 3 · yours to keep -->
+<section class="keep">
+  <div class="shell">
+    <h2 class="sec-h">Yours to keep, free, forever.</h2>
+    <div style="margin-top:26px">
+      <div class="krow"><div><div class="k-name">Your full dataset</div><div class="k-sub">Every reading behind your number.</div></div><a class="k-act" href="#">Download</a></div>
+      <div class="krow"><div><div class="k-name">Your result, as a document</div><div class="k-sub">This page, in a form you hold.</div></div><a class="k-act" href="#">Download</a></div>
+      <div class="krow"><div><div class="k-name">The cohort report</div><div class="k-sub">Effect size, uncertainty, and the open questions that follow.</div></div><span class="k-act static">published in full</span></div>
+      <div class="krow"><div><div class="k-name">Your founding place</div><div class="k-sub">Every season from here, at no cost.</div></div><span class="k-act static">locked</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="shell">
+    <p class="close-line">The number was always yours. Now you can prove it.</p>
+    <a class="back" href="landing.html">Back to the study</a>
+  </div>
+</section>
+
+<footer class="colophon">
+  <div class="shell">
+    <div class="mark">Ēnel Health<sup style="font-size:.46em;vertical-align:super;opacity:.6">®</sup></div>
+    <div class="tg">Real-world evidence, community-powered.</div>
+  </div>
+</footer>
+
+<script>
+/* Ēnel split-test harness — read query params, set scheme tokens.
+   g=ground (a navy · b petrol · c charcoal · d bone/light)
+   acc=accent (t terracotta · s signal red · r brass)
+   h=headline variant (2 = alternate copy, landings only)
+   Defaults live in each page's :root; this only overrides when a param is present. */
+(function () {
+  var q = new URLSearchParams(location.search);
+  var rs = document.documentElement.style;
+
+  var grounds = {
+    a: ['#0E1E33', '#F2ECDF', '#9aa7ba', 'rgba(242,236,223,.15)'], // ocean navy
+    b: ['#0F3B40', '#F2ECDF', '#9bb0ad', 'rgba(242,236,223,.15)'], // petrol
+    c: ['#091523', '#F2ECDF', '#94a2b6', 'rgba(242,236,223,.14)'], // charcoal abyss
+    d: ['#ECE4D6', '#23303d', '#6c6456', 'rgba(35,48,61,.16)']     // bone, inverted (dark type)
+  };
+  var g = q.get('g') || q.get('v'); // v kept for back-compat
+  if (g && grounds[g]) {
+    var s = grounds[g];
+    rs.setProperty('--hero', s[0]);
+    rs.setProperty('--hero-fg', s[1]);
+    rs.setProperty('--hero-dim', s[2]);
+    rs.setProperty('--hair-hero', s[3]);
+  }
+
+  var accents = { t: '#BD5B39', s: '#A8362B', r: '#B0883F' };
+  var ac = q.get('acc');
+  if (ac && accents[ac]) rs.setProperty('--accent', accents[ac]);
+
+  // keep the solid CTA legible on any ground/accent combination
+  var st = document.createElement('style');
+  st.textContent =
+    '.enroll,.enroll.dark{color:#F2ECDF}' +
+    '.enroll:hover,.enroll.dark:hover{background:var(--accent);filter:brightness(.93)}';
+  document.head.appendChild(st);
+
+  // headline / copy variant (landings carry data-alt / data-alt-lede)
+  if (q.get('h') === '2') {
+    var t = document.querySelector('h1[data-alt]');
+    if (t) t.textContent = t.getAttribute('data-alt');
+    var l = document.querySelector('.lede[data-alt-lede]');
+    if (l) l.textContent = l.getAttribute('data-alt-lede');
+  }
+
+  // keep the chosen scheme across the whole flow: carry params onto internal links
+  var qs = location.search;
+  if (qs) {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (/^[\w./-]+\.html$/.test(h)) a.setAttribute('href', h + qs);
+    });
+  }
+})();
+</script>
+</body>
+</html>
